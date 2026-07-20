@@ -487,6 +487,7 @@ const QuizGame = {
         
         // Update stats
         document.getElementById("curr-question").textContent = this.state.currentIndex + 1;
+        document.getElementById("total-questions").textContent = this.settings.totalQuestions;
         
         // Dynamic dashboard labels
         const scoreLabel = document.querySelector(".dashboard .dash-item:nth-of-type(4) .dash-label");
