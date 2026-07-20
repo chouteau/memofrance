@@ -179,13 +179,15 @@ const QuizGame = {
             el.classList.add("hoverable");
 
             el.addEventListener("mouseenter", (e) => {
+                const deptCode = el.id.replace("FR-", "").replace("C", "").replace("M", "");
+                const deptData = DEPARTMENTS_DATA.find(d => d.code === deptCode);
+
                 if (this.state.active) {
                     if (this.state.answered || this.settings.mechanic === "warmup") {
                         // Show details post-answer or during warmup
-                        const deptCode = el.id.replace("FR-", "").replace("C", "").replace("M", "");
-                        const deptData = DEPARTMENTS_DATA.find(d => d.code === deptCode);
                         if (deptData) {
-                            tooltip.innerHTML = `<strong>${deptData.name} (${deptData.code})</strong><br>Pref: ${deptData.prefecture}<br>Région: ${deptData.region}`;
+                            const subPrefs = deptData.subprefectures && deptData.subprefectures.length > 0 ? `<br>Sous-pref: ${deptData.subprefectures.join(", ")}` : "";
+                            tooltip.innerHTML = `<strong>${deptData.name} (${deptData.code})</strong><br>Pref: ${deptData.prefecture}${subPrefs}<br>Région: ${deptData.region}`;
                             tooltip.style.opacity = 1;
                         }
                     } else {
@@ -193,11 +195,17 @@ const QuizGame = {
                         tooltip.style.opacity = 0;
                     }
                 } else {
-                    // Show basic info in training
-                    const desc = el.getAttribute("aria-description");
-                    if (desc) {
-                        tooltip.innerHTML = `<strong>${desc}</strong>`;
+                    // Show full info in training mode
+                    if (deptData) {
+                        const subPrefs = deptData.subprefectures && deptData.subprefectures.length > 0 ? `<br>Sous-pref: ${deptData.subprefectures.join(", ")}` : "";
+                        tooltip.innerHTML = `<strong>${deptData.name} (${deptData.code})</strong><br>Pref: ${deptData.prefecture}${subPrefs}<br>Région: ${deptData.region}`;
                         tooltip.style.opacity = 1;
+                    } else {
+                        const desc = el.getAttribute("aria-description");
+                        if (desc) {
+                            tooltip.innerHTML = `<strong>${desc}</strong>`;
+                            tooltip.style.opacity = 1;
+                        }
                     }
                 }
             });
@@ -759,7 +767,8 @@ const QuizGame = {
             let details = `Vous avez cliqué sur : <strong>${clickedNameText}</strong>.<br>`;
             
             if (q.dept) {
-                details += `La bonne réponse était <strong>${q.dept.name} (${q.dept.code})</strong> (préfecture : ${q.dept.prefecture}, région : ${q.dept.region}).`;
+                const subPrefs = q.dept.subprefectures && q.dept.subprefectures.length > 0 ? `, sous-préfecture(s) : ${q.dept.subprefectures.join(", ")}` : "";
+                details += `La bonne réponse était <strong>${q.dept.name} (${q.dept.code})</strong> (préfecture : ${q.dept.prefecture}${subPrefs}, région : ${q.dept.region}).`;
             } else if (q.isRegionHighlight) {
                 details += `La bonne réponse était la région <strong>${q.correctAnswer}</strong>.`;
             }
