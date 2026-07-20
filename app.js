@@ -186,8 +186,7 @@ const QuizGame = {
                     if (this.state.answered || this.settings.mechanic === "warmup") {
                         // Show details post-answer or during warmup
                         if (deptData) {
-                            const subPrefs = deptData.subprefectures && deptData.subprefectures.length > 0 ? `<br>Sous-pref: ${deptData.subprefectures.join(", ")}` : "";
-                            tooltip.innerHTML = `<strong>${deptData.name} (${deptData.code})</strong><br>Pref: ${deptData.prefecture}${subPrefs}<br>Région: ${deptData.region}`;
+                            tooltip.innerHTML = `<strong>${deptData.name} (${deptData.code})</strong><br>Pref: ${deptData.prefecture}<br>Région: ${deptData.region}`;
                             tooltip.style.opacity = 1;
                         }
                     } else {
@@ -197,8 +196,7 @@ const QuizGame = {
                 } else {
                     // Show full info in training mode
                     if (deptData) {
-                        const subPrefs = deptData.subprefectures && deptData.subprefectures.length > 0 ? `<br>Sous-pref: ${deptData.subprefectures.join(", ")}` : "";
-                        tooltip.innerHTML = `<strong>${deptData.name} (${deptData.code})</strong><br>Pref: ${deptData.prefecture}${subPrefs}<br>Région: ${deptData.region}`;
+                        tooltip.innerHTML = `<strong>${deptData.name} (${deptData.code})</strong><br>Pref: ${deptData.prefecture}<br>Région: ${deptData.region}`;
                         tooltip.style.opacity = 1;
                     } else {
                         const desc = el.getAttribute("aria-description");
@@ -373,32 +371,14 @@ const QuizGame = {
         } 
         
         else if (type === "PREFECTURE") {
-            // Can ask prefecture OR subprefectures
-            const hasSubs = dept.subprefectures && dept.subprefectures.length > 0;
-            const askSub = hasSubs && Math.random() > 0.5;
-
-            if (askSub) {
-                const chosenSub = dept.subprefectures[Math.floor(Math.random() * dept.subprefectures.length)];
-                questionText = `Laquelle de ces villes est une sous-préfecture du département : ${dept.name} (${dept.code}) ?`;
-                correctAnswer = chosenSub;
-                
-                // Distractors: other sub-prefectures/prefectures
-                const allOtherSubs = DEPARTMENTS_DATA
-                    .filter(d => d.code !== dept.code)
-                    .map(d => d.subprefectures)
-                    .flat()
-                    .filter(s => s && s !== chosenSub);
-                const pool = allOtherSubs.sort(() => Math.random() - 0.5).slice(0, 3);
-                options = [chosenSub, ...pool];
-            } else {
-                questionText = `Quelle est la préfecture du département : ${dept.name} (${dept.code}) ?`;
-                correctAnswer = dept.prefecture;
-                
-                // Distractors: other prefectures
-                const otherPrefs = DEPARTMENTS_DATA.filter(d => d.code !== dept.code).map(d => d.prefecture);
-                const pool = otherPrefs.sort(() => Math.random() - 0.5).slice(0, 3);
-                options = [dept.prefecture, ...pool];
-            }
+            // Always ask for prefecture (subprefectures removed)
+            questionText = `Quelle est la préfecture du département : ${dept.name} (${dept.code}) ?`;
+            correctAnswer = dept.prefecture;
+            
+            // Distractors: other prefectures
+            const otherPrefs = DEPARTMENTS_DATA.filter(d => d.code !== dept.code).map(d => d.prefecture);
+            const pool = otherPrefs.sort(() => Math.random() - 0.5).slice(0, 3);
+            options = [dept.prefecture, ...pool];
         } 
         
         else if (type === "CODE_DEPT") {
@@ -419,9 +399,8 @@ const QuizGame = {
         } 
         
         else if (type === "CITY_TO_DEPT") {
-            // Pick either prefecture or subprefecture
-            const cities = [dept.prefecture, ...(dept.subprefectures || [])];
-            const chosenCity = cities[Math.floor(Math.random() * cities.length)];
+            // Pick only the prefecture (subprefectures removed)
+            const chosenCity = dept.prefecture;
             
             questionText = `Dans quel département se situe la ville de ${chosenCity} ?`;
             correctAnswer = `${dept.name} (${dept.code})`;
@@ -515,17 +494,6 @@ const QuizGame = {
             container.className = "tinder-card-wrapper";
             container.style.cssText = "perspective: 1000px; width: 100%; display: flex; justify-content: center; margin: 0.5rem 0;";
             
-            // Build sub-prefectures string if any
-            let subPrefsHtml = "";
-            if (q.dept.subprefectures && q.dept.subprefectures.length > 0) {
-                subPrefsHtml = `
-                <div style="display: flex; flex-direction: column; gap: 0.25rem; align-items: flex-start; font-size: 0.9rem; text-align: left;">
-                    <span style="color: var(--text-secondary); font-weight: 500;">Sous-préfecture(s) :</span>
-                    <span style="color: var(--text-primary); font-weight: 600; opacity: 0.9;">${q.dept.subprefectures.join(", ")}</span>
-                </div>
-                `;
-            }
-
             container.innerHTML = `
                 <div class="tinder-card" style="width: 100%; background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem; text-align: center; display: flex; flex-direction: column; gap: 1.25rem; align-items: center; box-shadow: var(--shadow-lg); cursor: pointer; user-select: none; position: relative; overflow: hidden;">
                     <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: var(--accent-glow); filter: blur(50px); opacity: 0.15; border-radius: 50%; pointer-events: none;"></div>
@@ -546,7 +514,6 @@ const QuizGame = {
                             <span style="color: var(--text-secondary); font-weight: 500;">Région :</span>
                             <span style="color: var(--text-primary); font-weight: 700; text-align: right;">${q.dept.region}</span>
                         </div>
-                        ${subPrefsHtml}
                     </div>
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; width: 100%;">
                         <button class="btn-primary" style="width: 100%; justify-content: center; gap: 0.5rem;">
@@ -690,9 +657,6 @@ const QuizGame = {
             let info = "";
             if (q.dept) {
                 info = `Le département <strong>${q.dept.name} (${q.dept.code})</strong> est situé dans la région <strong>${q.dept.region}</strong>. Sa préfecture est <strong>${q.dept.prefecture}</strong>.`;
-                if (q.dept.subprefectures && q.dept.subprefectures.length > 0) {
-                    info += ` Ses sous-préfectures sont : ${q.dept.subprefectures.join(", ")}.`;
-                }
             }
             feedbackText.innerHTML = info;
 
@@ -769,8 +733,7 @@ const QuizGame = {
             let details = `Vous avez cliqué sur : <strong>${clickedNameText}</strong>.<br>`;
             
             if (q.dept) {
-                const subPrefs = q.dept.subprefectures && q.dept.subprefectures.length > 0 ? `, sous-préfecture(s) : ${q.dept.subprefectures.join(", ")}` : "";
-                details += `La bonne réponse était <strong>${q.dept.name} (${q.dept.code})</strong> (préfecture : ${q.dept.prefecture}${subPrefs}, région : ${q.dept.region}).`;
+                details += `La bonne réponse était <strong>${q.dept.name} (${q.dept.code})</strong> (préfecture : ${q.dept.prefecture}, région : ${q.dept.region}).`;
             } else if (q.isRegionHighlight) {
                 details += `La bonne réponse était la région <strong>${q.correctAnswer}</strong>.`;
             }
