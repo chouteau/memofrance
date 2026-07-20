@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mémomap France - Jeu de mémoire géographique</title>
+    <title>MemoFrance - Jeu de Quiz Géographique Interactif (Régions, Départements, Préfectures)</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Testez et améliorez vos connaissances de la géographie française avec MemoFrance. Jouez au quiz interactif sur les départements, régions, préfectures et sous-préfectures en mode QCM ou Localisation sur carte.">
+    <meta name="keywords" content="géographie, France, quiz, memofrance, carte de france, départements, régions, préfectures, sous-préfectures, jeu éducatif, DOM TOM">
+    <meta name="author" content="MemoFrance">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chouteau.github.io/memofrance/">
+    <meta property="og:title" content="MemoFrance - Jeu de Quiz Géographique Interactif">
+    <meta property="og:description" content="Testez et améliorez vos connaissances de la géographie française avec MemoFrance. Quiz interactif en mode QCM ou Localisation sur carte.">
+    <meta property="og:image" content="https://chouteau.github.io/memofrance/logo_hexagon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://chouteau.github.io/memofrance/">
+    <meta property="twitter:title" content="MemoFrance - Jeu de Quiz Géographique Interactif">
+    <meta property="twitter:description" content="Testez et améliorez vos connaissances de la géographie française avec MemoFrance. Quiz interactif en mode QCM ou Localisation sur carte.">
+    <meta property="twitter:image" content="https://chouteau.github.io/memofrance/logo_hexagon.png">
+
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗺️</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 6'%3E%3Crect width='3' height='6' fill='%23002654'/%3E%3Crect x='3' width='3' height='6' fill='%23FFF'/%3E%3Crect x='6' width='3' height='6' fill='%23ED2939'/%3E%3C/svg%3E">
 </head>
 <body>
     <!-- Background visual grid -->
@@ -20,7 +41,7 @@
         <section class="dashboard">
             <div class="dash-item brand" style="display: flex; flex-direction: row; align-items: center; gap: 0.5rem;">
                 <span class="logo-icon" style="font-size: 1.3rem;">🗺️</span>
-                <span class="dash-value" style="font-size: 1.1rem; font-weight: 700; background: linear-gradient(135deg, var(--text-primary), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Mémomap France</span>
+                <span class="dash-value" style="font-size: 1.1rem; font-weight: 700; background: linear-gradient(135deg, var(--text-primary), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">MemoFrance</span>
             </div>
 
             <div class="dash-item">
@@ -84,7 +105,8 @@
     <!-- Modale Start: Choose settings & Start game -->
     <div id="modal-start" class="overlay active">
         <div class="modal-content">
-            <h2 class="modal-title">Mémomap France</h2>
+            <img src="logo_hexagon.png" alt="MemoFrance Logo" style="width: 100px; height: 100px; margin: 0 auto; display: block; border-radius: var(--radius-sm); box-shadow: var(--shadow-glow); filter: drop-shadow(0 4px 8px rgba(99, 102, 241, 0.25)); border: 1.5px solid var(--border-color); margin-bottom: 1rem;">
+            <h2 class="modal-title">MemoFrance</h2>
             <p style="color: var(--text-secondary); margin-bottom: 0.25rem;">Testez votre mémoire géographique sur les départements français, les régions et les préfectures.</p>
             <p style="color: var(--text-secondary); font-size: 0.8rem; font-style: italic; opacity: 0.8; margin-top: 0; margin-bottom: 1.25rem;">Le jeu idéal à pratiquer en attendant que les Agents IA génèrent votre code... 😉</p>
             

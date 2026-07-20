@@ -1,6 +1,8 @@
-# 🗺️ Mémomap France
+# 🗺️ MemoFrance
 
-**Mémomap France** est un jeu de quiz géographique interactif moderne et esthétique, conçu pour tester et améliorer votre mémoire sur la géographie française (métropole et Outre-mer). 
+**MemoFrance** est un jeu de quiz géographique interactif moderne et esthétique, conçu pour tester et améliorer votre mémoire sur la géographie française (métropole et Outre-mer). 
+
+👉 **[Jouer au jeu en ligne !](https://chouteau.github.io/memofrance/)**
 
 *💡 Un clin d'œil amusant : C'est le jeu idéal à pratiquer en attendant que les Agents IA finissent de produire votre code... 😉*
 
