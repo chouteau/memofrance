@@ -689,3 +689,17 @@ body {
 .subtype-com, .subtype-cdom, .subtype-ctuom {
     cursor: pointer;
 }
+
+/* Tinder Card Animations */
+.tinder-card {
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s ease, border-color var(--transition-fast), box-shadow var(--transition-fast) !important;
+}
+.tinder-card.swipe-right {
+    transform: translate(250px, -30px) rotate(20deg) !important;
+    opacity: 0 !important;
+}
+.tinder-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.18) !important;
+}

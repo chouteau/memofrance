@@ -40,6 +40,23 @@ const SoundEffects = {
         
         osc.start();
         osc.stop(this.ctx.currentTime + 0.4);
+    },
+    playSwipe() {
+        this.init();
+        if (!this.ctx) return;
+        const osc = this.ctx.createOscillator();
+        const gain = this.ctx.createGain();
+        osc.connect(gain);
+        gain.connect(this.ctx.destination);
+        
+        osc.frequency.setValueAtTime(300, this.ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(600, this.ctx.currentTime + 0.15);
+        
+        gain.gain.setValueAtTime(0.05, this.ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.15);
+        
+        osc.start();
+        osc.stop(this.ctx.currentTime + 0.15);
     }
 };
 
@@ -133,6 +150,20 @@ const QuizGame = {
                 const settingType = card.dataset.setting;
                 const value = card.dataset.value;
                 this.settings[settingType] = value;
+
+                // Dynamic UI: Dim and disable categories if warmup is selected
+                if (settingType === "mechanic") {
+                    const modeGroup = document.querySelector(".settings-group:nth-of-type(2)");
+                    if (modeGroup) {
+                        if (value === "warmup") {
+                            modeGroup.style.opacity = "0.35";
+                            modeGroup.style.pointerEvents = "none";
+                        } else {
+                            modeGroup.style.opacity = "1";
+                            modeGroup.style.pointerEvents = "auto";
+                        }
+                    }
+                }
             });
         });
     },
@@ -149,8 +180,8 @@ const QuizGame = {
 
             el.addEventListener("mouseenter", (e) => {
                 if (this.state.active) {
-                    if (this.state.answered) {
-                        // Show details post-answer
+                    if (this.state.answered || this.settings.mechanic === "warmup") {
+                        // Show details post-answer or during warmup
                         const deptCode = el.id.replace("FR-", "").replace("C", "").replace("M", "");
                         const deptData = DEPARTMENTS_DATA.find(d => d.code === deptCode);
                         if (deptData) {
@@ -184,8 +215,21 @@ const QuizGame = {
             });
             
             el.addEventListener("click", () => {
-                if (this.state.active && !this.state.answered && this.settings.mechanic === "click") {
-                    this.handleMapClick(el);
+                if (this.state.active && !this.state.answered) {
+                    if (this.settings.mechanic === "click") {
+                        this.handleMapClick(el);
+                    } else if (this.settings.mechanic === "warmup") {
+                        // In warmup mode, clicking the map triggers card swipe and goes to the next
+                        this.state.answered = true;
+                        const card = document.querySelector(".tinder-card");
+                        if (card) {
+                            card.classList.add("swipe-right");
+                        }
+                        SoundEffects.playSwipe();
+                        setTimeout(() => {
+                            this.nextQuestion();
+                        }, 350);
+                    }
                 }
             });
         });
@@ -211,6 +255,19 @@ const QuizGame = {
     },
 
     generateQuestions() {
+        if (this.settings.mechanic === "warmup") {
+            const shuffled = [...DEPARTMENTS_DATA].sort(() => Math.random() - 0.5);
+            this.settings.totalQuestions = shuffled.length;
+            this.state.questions = shuffled.map(dept => ({
+                type: "WARMUP",
+                dept: dept,
+                correctAnswer: dept.name,
+                highlightCode: dept.code,
+                isRegionHighlight: false
+            }));
+            return;
+        }
+
         const pool = [];
         const signatures = new Set();
         
@@ -420,7 +477,13 @@ const QuizGame = {
         
         // Update stats
         document.getElementById("curr-question").textContent = this.state.currentIndex + 1;
-        document.getElementById("score-value").textContent = `${this.state.score} / ${this.state.currentIndex}`;
+        
+        // Dynamic dashboard labels
+        const scoreLabel = document.querySelector(".dashboard .dash-item:nth-of-type(4) .dash-label");
+        if (scoreLabel) {
+            scoreLabel.textContent = this.settings.mechanic === "warmup" ? "Mode" : "Score";
+        }
+        document.getElementById("score-value").textContent = this.settings.mechanic === "warmup" ? "Découverte" : `${this.state.score} / ${this.state.currentIndex}`;
         
         // Progress bar
         const progressPercent = ((this.state.currentIndex) / this.settings.totalQuestions) * 100;
@@ -428,12 +491,80 @@ const QuizGame = {
 
         // Render question details
         const typeBadge = document.getElementById("question-badge");
-        typeBadge.textContent = this.settings.mechanic === "click" ? "Localisation" : q.type.replace("_", " ");
+        typeBadge.textContent = this.settings.mechanic === "warmup" ? "Découverte" : (this.settings.mechanic === "click" ? "Localisation" : q.type.replace("_", " "));
         
         const grid = document.getElementById("options-grid");
         grid.innerHTML = "";
 
-        if (this.settings.mechanic === "click") {
+        if (this.settings.mechanic === "warmup") {
+            // Warmup mode: Tinder-like memo card
+            document.getElementById("question-text").textContent = "Fiche d'échauffement :";
+
+            const container = document.createElement("div");
+            container.className = "tinder-card-wrapper";
+            container.style.cssText = "perspective: 1000px; width: 100%; display: flex; justify-content: center; margin: 0.5rem 0;";
+            
+            // Build sub-prefectures string if any
+            let subPrefsHtml = "";
+            if (q.dept.subprefectures && q.dept.subprefectures.length > 0) {
+                subPrefsHtml = `
+                <div style="display: flex; flex-direction: column; gap: 0.25rem; align-items: flex-start; font-size: 0.9rem; text-align: left;">
+                    <span style="color: var(--text-secondary); font-weight: 500;">Sous-préfecture(s) :</span>
+                    <span style="color: var(--text-primary); font-weight: 600; opacity: 0.9;">${q.dept.subprefectures.join(", ")}</span>
+                </div>
+                `;
+            }
+
+            container.innerHTML = `
+                <div class="tinder-card" style="width: 100%; background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem; text-align: center; display: flex; flex-direction: column; gap: 1.25rem; align-items: center; box-shadow: var(--shadow-lg); cursor: pointer; user-select: none; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: var(--accent-glow); filter: blur(50px); opacity: 0.15; border-radius: 50%; pointer-events: none;"></div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                        <div style="width: 54px; height: 54px; border-radius: 50%; background: var(--accent-color); color: #fff; font-size: 1.6rem; font-weight: 800; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);">
+                            ${q.dept.code}
+                        </div>
+                        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin: 0.25rem 0 0 0; letter-spacing: -0.02em;">
+                            ${q.dept.name}
+                        </h2>
+                    </div>
+                    <div style="width: 100%; display: flex; flex-direction: column; gap: 0.85rem; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 1.25rem 0;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem;">
+                            <span style="color: var(--text-secondary); font-weight: 500;">Préfecture :</span>
+                            <span style="color: var(--text-primary); font-weight: 700;">${q.dept.prefecture}</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem;">
+                            <span style="color: var(--text-secondary); font-weight: 500;">Région :</span>
+                            <span style="color: var(--text-primary); font-weight: 700; text-align: right;">${q.dept.region}</span>
+                        </div>
+                        ${subPrefsHtml}
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.5rem; width: 100%;">
+                        <button class="btn-primary" style="width: 100%; justify-content: center; gap: 0.5rem;">
+                            <span>Suivant</span>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                        </button>
+                        <span style="font-size: 0.75rem; color: var(--text-secondary); opacity: 0.7; font-style: italic;">(ou cliquez sur la carte pour passer au suivant)</span>
+                    </div>
+                </div>
+            `;
+
+            // Bind card swipe event
+            const cardEl = container.querySelector(".tinder-card");
+            cardEl.addEventListener("click", () => {
+                if (this.state.answered) return;
+                this.state.answered = true;
+                cardEl.classList.add("swipe-right");
+                SoundEffects.playSwipe();
+                setTimeout(() => {
+                    this.nextQuestion();
+                }, 350);
+            });
+
+            grid.appendChild(container);
+            
+            // Highlight map (with target department)
+            this.highlightMap(q.highlightCode, q.isRegionHighlight, "highlighted");
+
+        } else if (this.settings.mechanic === "click") {
             // Click mode: Clear map highlights (the user must find the target)
             this.clearMapHighlights();
             
@@ -666,54 +797,77 @@ const QuizGame = {
         // Progress bar fully filled
         document.getElementById("progress-bar").style.width = "100%";
 
+        // Restore score label for next games
+        const scoreLabel = document.querySelector(".dashboard .dash-item:nth-of-type(4) .dash-label");
+        if (scoreLabel) {
+            scoreLabel.textContent = "Score";
+        }
+
         const modalEnd = document.getElementById("modal-end");
         modalEnd.classList.add("active");
 
-        // Display Score
+        const isWarmup = this.settings.mechanic === "warmup";
+        
+        // Custom header titles based on mode
+        const modalTitle = document.querySelector("#modal-end .modal-title");
+        const scoreSubtitle = document.querySelector("#modal-end p");
+        const recapSection = document.getElementById("recap-section");
         const finalScore = document.getElementById("final-score");
-        finalScore.textContent = `${this.state.score} / ${this.settings.totalQuestions}`;
+        const ratingMessage = document.getElementById("rating-message");
 
-        // Display Performance Rating message
-        const rate = this.state.score / this.settings.totalQuestions;
-        let ratingText = "";
-        let colorClass = "";
-        if (rate >= 0.9) {
-            ratingText = "Excellent ! Un génie de la cartographie française ! 🏆";
-        } else if (rate >= 0.7) {
-            ratingText = "Très bien ! Vos connaissances sont solides. 👍";
-        } else if (rate >= 0.5) {
-            ratingText = "Pas mal ! Encore un peu d'entraînement. 📖";
+        if (isWarmup) {
+            if (modalTitle) modalTitle.textContent = "Échauffement Terminé !";
+            if (scoreSubtitle) scoreSubtitle.textContent = "Fiches parcourues :";
+            finalScore.textContent = "101 / 101";
+            ratingMessage.innerHTML = "<strong>Félicitations ! Vous avez révisé avec succès l'intégralité des 101 départements français. 🏆</strong>";
+            if (recapSection) recapSection.style.display = "none";
         } else {
-            ratingText = "Peut mieux faire... Continuez à réviser la carte ! 🗺️";
-        }
-        document.getElementById("rating-message").innerHTML = `<strong>${ratingText}</strong>`;
+            if (modalTitle) modalTitle.textContent = "Partie Terminée !";
+            if (scoreSubtitle) scoreSubtitle.textContent = "Votre score final :";
+            finalScore.textContent = `${this.state.score} / ${this.settings.totalQuestions}`;
+            if (recapSection) recapSection.style.display = "block";
 
-        // Render Review / Recap list
-        const recapList = document.getElementById("recap-list");
-        recapList.innerHTML = "";
+            // Display Performance Rating message
+            const rate = this.state.score / this.settings.totalQuestions;
+            let ratingText = "";
+            if (rate >= 0.9) {
+                ratingText = "Excellent ! Un génie de la cartographie française ! 🏆";
+            } else if (rate >= 0.7) {
+                ratingText = "Très bien ! Vos connaissances sont solides. 👍";
+            } else if (rate >= 0.5) {
+                ratingText = "Pas mal ! Encore un peu d'entraînement. 📖";
+            } else {
+                ratingText = "Peut mieux faire... Continuez à réviser la carte ! 🗺️";
+            }
+            ratingMessage.innerHTML = `<strong>${ratingText}</strong>`;
 
-        this.state.userHistory.forEach((h, idx) => {
-            const row = document.createElement("div");
-            row.className = "recap-row";
-            
-            const indicatorClass = h.isCorrect ? "correct" : "wrong";
-            const indicatorSymbol = h.isCorrect ? "✓" : "✗";
-            
-            row.innerHTML = `
-                <div>
-                    <strong>Q${idx + 1}:</strong> ${h.question.questionText}
-                    <br>
-                    <small style="color: var(--text-secondary)">Attendu: ${h.question.correctAnswer} | Choisi: ${h.selected}</small>
-                </div>
-                <div class="recap-indicator ${indicatorClass}">${indicatorSymbol}</div>
-            `;
-            
-            // Allow clicking row to show that department highlighted on map (post-game review)
-            row.addEventListener("click", () => {
-                this.highlightMap(h.question.highlightCode, h.question.isRegionHighlight, h.isCorrect ? "correct-highlight" : "wrong-highlight");
+            // Render Review / Recap list
+            const recapList = document.getElementById("recap-list");
+            recapList.innerHTML = "";
+
+            this.state.userHistory.forEach((h, idx) => {
+                const row = document.createElement("div");
+                row.className = "recap-row";
+                
+                const indicatorClass = h.isCorrect ? "correct" : "wrong";
+                const indicatorSymbol = h.isCorrect ? "✓" : "✗";
+                
+                row.innerHTML = `
+                    <div>
+                        <strong>Q${idx + 1}:</strong> ${h.question.questionText}
+                        <br>
+                        <small style="color: var(--text-secondary)">Attendu: ${h.question.correctAnswer} | Choisi: ${h.selected}</small>
+                    </div>
+                    <div class="recap-indicator ${indicatorClass}">${indicatorSymbol}</div>
+                `;
+                
+                // Allow clicking row to show that department highlighted on map (post-game review)
+                row.addEventListener("click", () => {
+                    this.highlightMap(h.question.highlightCode, h.question.isRegionHighlight, h.isCorrect ? "correct-highlight" : "wrong-highlight");
+                });
+                recapList.appendChild(row);
             });
-            recapList.appendChild(row);
-        });
+        }
     }
 };
 

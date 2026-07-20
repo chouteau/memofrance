@@ -348,6 +348,10 @@
                         <h3>Clic sur Carte</h3>
                         <p>Cliquer sur la carte au bon endroit</p>
                     </div>
+                    <div class="setting-card" data-setting="mechanic" data-value="warmup">
+                        <h3>Échauffement</h3>
+                        <p>Cartes mémo (Tinder) pour réviser dans l'ordre aléatoire</p>
+                    </div>
                 </div>
             </div>
 
@@ -389,13 +393,15 @@
             <div id="final-score" class="score-badge-large">0 / 20</div>
             <div id="rating-message" style="margin-bottom: 0.5rem;">Rating...</div>
             
-            <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: left; margin-bottom: 0.5rem;">
-                Revue des questions (cliquez sur une ligne pour afficher l'emplacement sur la carte) :
-            </p>
-            
-            <!-- List of failed/correct questions -->
-            <div id="recap-list" class="recap-container">
-                <!-- Loaded dynamically via app.js -->
+            <div id="recap-section">
+                <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: left; margin-bottom: 0.5rem;">
+                    Revue des questions (cliquez sur une ligne pour afficher l'emplacement sur la carte) :
+                </p>
+                
+                <!-- List of failed/correct questions -->
+                <div id="recap-list" class="recap-container">
+                    <!-- Loaded dynamically via app.js -->
+                </div>
             </div>
 
             <button id="btn-restart" class="btn-primary">
