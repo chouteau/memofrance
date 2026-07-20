@@ -1,0 +1,950 @@
+[
+  {
+    "ville": "Département (Code Insee)",
+    "departement": "CodeInsee"
+  },
+  {
+    "ville": "Ain (01)",
+    "departement": "01034"
+  },
+  {
+    "ville": "01173",
+    "departement": "Gex"
+  },
+  {
+    "ville": "01269",
+    "departement": "Nantua"
+  },
+  {
+    "ville": "Aisne (02)",
+    "departement": "02168"
+  },
+  {
+    "ville": "02691",
+    "departement": "Saint-Quentin"
+  },
+  {
+    "ville": "02722",
+    "departement": "Soissons"
+  },
+  {
+    "ville": "02789",
+    "departement": "Vervins"
+  },
+  {
+    "ville": "Allier (03)",
+    "departement": "03185"
+  },
+  {
+    "ville": "03310",
+    "departement": "Vichy"
+  },
+  {
+    "ville": "Alpes-de-Haute-Provence (04)",
+    "departement": "04019"
+  },
+  {
+    "ville": "04039",
+    "departement": "Castellane"
+  },
+  {
+    "ville": "04088",
+    "departement": "Forcalquier"
+  },
+  {
+    "ville": "Hautes-Alpes (05)",
+    "departement": "05023"
+  },
+  {
+    "ville": "Alpes-Maritimes (06)",
+    "departement": "06069"
+  },
+  {
+    "ville": "Ardèche (07)",
+    "departement": "07132"
+  },
+  {
+    "ville": "07324",
+    "departement": "Tournon-sur-Rhône"
+  },
+  {
+    "ville": "Ardennes (08)",
+    "departement": "08362"
+  },
+  {
+    "ville": "08409",
+    "departement": "Sedan"
+  },
+  {
+    "ville": "08490",
+    "departement": "Vouziers"
+  },
+  {
+    "ville": "Ariège (09)",
+    "departement": "09225"
+  },
+  {
+    "ville": "09261",
+    "departement": "Saint-Girons"
+  },
+  {
+    "ville": "Aube (10)",
+    "departement": "10033"
+  },
+  {
+    "ville": "10268",
+    "departement": "Nogent-sur-Seine"
+  },
+  {
+    "ville": "Aude (11)",
+    "departement": "11206"
+  },
+  {
+    "ville": "11262",
+    "departement": "Narbonne"
+  },
+  {
+    "ville": "Aveyron (12)",
+    "departement": "12145"
+  },
+  {
+    "ville": "12300",
+    "departement": "Villefranche-de-Rouergue"
+  },
+  {
+    "ville": "Bouches-du-Rhône (13)",
+    "departement": "13001"
+  },
+  {
+    "ville": "13004",
+    "departement": "Arles"
+  },
+  {
+    "ville": "13047",
+    "departement": "Istres"
+  },
+  {
+    "ville": "Calvados (14)",
+    "departement": "14047"
+  },
+  {
+    "ville": "14366",
+    "departement": "Lisieux"
+  },
+  {
+    "ville": "14762",
+    "departement": "Vire Normandie"
+  },
+  {
+    "ville": "Cantal (15)",
+    "departement": "15120"
+  },
+  {
+    "ville": "15187",
+    "departement": "Saint-Flour"
+  },
+  {
+    "ville": "Charente (16)",
+    "departement": "16102"
+  },
+  {
+    "ville": "16106",
+    "departement": "Confolens"
+  },
+  {
+    "ville": "Charente-Maritime (17)",
+    "departement": "17197"
+  },
+  {
+    "ville": "17299",
+    "departement": "Rochefort"
+  },
+  {
+    "ville": "17415",
+    "departement": "Saintes"
+  },
+  {
+    "ville": "17347",
+    "departement": "Saint-Jean-d'Angély"
+  },
+  {
+    "ville": "Cher (18)",
+    "departement": "18197"
+  },
+  {
+    "ville": "18279",
+    "departement": "Vierzon"
+  },
+  {
+    "ville": "Corrèze (19)",
+    "departement": "19031"
+  },
+  {
+    "ville": "19275",
+    "departement": "Ussel"
+  },
+  {
+    "ville": "Corse-du-Sud (2A)",
+    "departement": "2A272"
+  },
+  {
+    "ville": "Haute-Corse (2B)",
+    "departement": "2B050"
+  },
+  {
+    "ville": "2B096",
+    "departement": "Corte"
+  },
+  {
+    "ville": "Côte-d'Or (21)",
+    "departement": "21054"
+  },
+  {
+    "ville": "21425",
+    "departement": "Montbard"
+  },
+  {
+    "ville": "Côtes-d'Armor (22)",
+    "departement": "22050"
+  },
+  {
+    "ville": "22070",
+    "departement": "Guingamp"
+  },
+  {
+    "ville": "22113",
+    "departement": "Lannion"
+  },
+  {
+    "ville": "Creuse (23)",
+    "departement": "23008"
+  },
+  {
+    "ville": "Dordogne (24)",
+    "departement": "24037"
+  },
+  {
+    "ville": "24311",
+    "departement": "Nontron"
+  },
+  {
+    "ville": "24520",
+    "departement": "Sarlat-la-Canéda"
+  },
+  {
+    "ville": "Doubs (25)",
+    "departement": "25388"
+  },
+  {
+    "ville": "25462",
+    "departement": "Pontarlier"
+  },
+  {
+    "ville": "Drôme (26)",
+    "departement": "26113"
+  },
+  {
+    "ville": "26220",
+    "departement": "Nyons"
+  },
+  {
+    "ville": "Eure (27)",
+    "departement": "27056"
+  },
+  {
+    "ville": "27016",
+    "departement": "Les Andelys"
+  },
+  {
+    "ville": "Eure-et-Loir (28)",
+    "departement": "28088"
+  },
+  {
+    "ville": "28134",
+    "departement": "Dreux"
+  },
+  {
+    "ville": "28280",
+    "departement": "Nogent-le-Rotrou"
+  },
+  {
+    "ville": "Finistère (29)",
+    "departement": "29019"
+  },
+  {
+    "ville": "29026",
+    "departement": "Châteaulin"
+  },
+  {
+    "ville": "29151",
+    "departement": "Morlaix"
+  },
+  {
+    "ville": "Gard (30)",
+    "departement": "30007"
+  },
+  {
+    "ville": "30350",
+    "departement": "Le Vigan"
+  },
+  {
+    "ville": "Haute-Garonne (31)",
+    "departement": "31395"
+  },
+  {
+    "ville": "31483",
+    "departement": "Saint-Gaudens"
+  },
+  {
+    "ville": "Gers (32)",
+    "departement": "32107"
+  },
+  {
+    "ville": "32256",
+    "departement": "Mirande"
+  },
+  {
+    "ville": "Gironde (33)",
+    "departement": "33009"
+  },
+  {
+    "ville": "33058",
+    "departement": "Blaye"
+  },
+  {
+    "ville": "33227",
+    "departement": "Langon"
+  },
+  {
+    "ville": "33240",
+    "departement": "Lesparre-Médoc"
+  },
+  {
+    "ville": "33243",
+    "departement": "Libourne"
+  },
+  {
+    "ville": "Hérault (34)",
+    "departement": "34032"
+  },
+  {
+    "ville": "34142",
+    "departement": "Lodève"
+  },
+  {
+    "ville": "Ille-et-Vilaine (35)",
+    "departement": "35115"
+  },
+  {
+    "ville": "35236",
+    "departement": "Redon"
+  },
+  {
+    "ville": "35288",
+    "departement": "Saint-Malo"
+  },
+  {
+    "ville": "Indre (36)",
+    "departement": "36088"
+  },
+  {
+    "ville": "36046",
+    "departement": "La Châtre"
+  },
+  {
+    "ville": "36018",
+    "departement": "Le Blanc"
+  },
+  {
+    "ville": "Indre-et-Loire (37)",
+    "departement": "37072"
+  },
+  {
+    "ville": "37132",
+    "departement": "Loches"
+  },
+  {
+    "ville": "Isère (38)",
+    "departement": "38509"
+  },
+  {
+    "ville": "38544",
+    "departement": "Vienne"
+  },
+  {
+    "ville": "Jura (39)",
+    "departement": "39198"
+  },
+  {
+    "ville": "39478",
+    "departement": "Saint-Claude"
+  },
+  {
+    "ville": "Landes (40)",
+    "departement": "40088"
+  },
+  {
+    "ville": "Loir-et-Cher (41)",
+    "departement": "41194"
+  },
+  {
+    "ville": "41269",
+    "departement": "Vendôme"
+  },
+  {
+    "ville": "Loire (42)",
+    "departement": "42147"
+  },
+  {
+    "ville": "42187",
+    "departement": "Roanne"
+  },
+  {
+    "ville": "Haute-Loire (43)",
+    "departement": "43040"
+  },
+  {
+    "ville": "43268",
+    "departement": "Yssingeaux"
+  },
+  {
+    "ville": "Loire-Atlantique (44)",
+    "departement": "44036"
+  },
+  {
+    "ville": "44184",
+    "departement": "Saint-Nazaire"
+  },
+  {
+    "ville": "Loiret (45)",
+    "departement": "45208"
+  },
+  {
+    "ville": "45252",
+    "departement": "Pithiviers"
+  },
+  {
+    "ville": "Lot (46)",
+    "departement": "46102"
+  },
+  {
+    "ville": "46127",
+    "departement": "Gourdon"
+  },
+  {
+    "ville": "Lot-et-Garonne (47)",
+    "departement": "47157"
+  },
+  {
+    "ville": "47195",
+    "departement": "Nérac"
+  },
+  {
+    "ville": "47323",
+    "departement": "Villeneuve-sur-Lot"
+  },
+  {
+    "ville": "Lozère (48)",
+    "departement": "48061"
+  },
+  {
+    "ville": "Maine-et-Loire (49)",
+    "departement": "49099"
+  },
+  {
+    "ville": "49328",
+    "departement": "Saumur"
+  },
+  {
+    "ville": "49331",
+    "departement": "Segré-en-Anjou Bleu"
+  },
+  {
+    "ville": "Manche (50)",
+    "departement": "50025"
+  },
+  {
+    "ville": "50129",
+    "departement": "Cherbourg-en-Cotentin"
+  },
+  {
+    "ville": "50147",
+    "departement": "Coutances"
+  },
+  {
+    "ville": "Marne (51)",
+    "departement": "51230"
+  },
+  {
+    "ville": "51454",
+    "departement": "Reims"
+  },
+  {
+    "ville": "51649",
+    "departement": "Vitry-le-François"
+  },
+  {
+    "ville": "Haute-Marne (52)",
+    "departement": "52269"
+  },
+  {
+    "ville": "52448",
+    "departement": "Saint-Dizier"
+  },
+  {
+    "ville": "Mayenne (53)",
+    "departement": "53062"
+  },
+  {
+    "ville": "53147",
+    "departement": "Mayenne"
+  },
+  {
+    "ville": "Meurthe-et-Moselle (54)",
+    "departement": "54329"
+  },
+  {
+    "ville": "54528",
+    "departement": "Toul"
+  },
+  {
+    "ville": "54099",
+    "departement": "Val de Briey"
+  },
+  {
+    "ville": "Meuse (55)",
+    "departement": "55122"
+  },
+  {
+    "ville": "55545",
+    "departement": "Verdun"
+  },
+  {
+    "ville": "Morbihan (56)",
+    "departement": "56121"
+  },
+  {
+    "ville": "56178",
+    "departement": "Pontivy"
+  },
+  {
+    "ville": "Moselle (57)",
+    "departement": "57227"
+  },
+  {
+    "ville": "57630",
+    "departement": "Sarrebourg"
+  },
+  {
+    "ville": "57631",
+    "departement": "Sarreguemines"
+  },
+  {
+    "ville": "57672",
+    "departement": "Thionville"
+  },
+  {
+    "ville": "Nièvre (58)",
+    "departement": "58062"
+  },
+  {
+    "ville": "58079",
+    "departement": "Clamecy"
+  },
+  {
+    "ville": "58086",
+    "departement": "Cosne-Cours-sur-Loire"
+  },
+  {
+    "ville": "Nord (59)",
+    "departement": "59036"
+  },
+  {
+    "ville": "59122",
+    "departement": "Cambrai"
+  },
+  {
+    "ville": "59178",
+    "departement": "Douai"
+  },
+  {
+    "ville": "59183",
+    "departement": "Dunkerque"
+  },
+  {
+    "ville": "59606",
+    "departement": "Valenciennes"
+  },
+  {
+    "ville": "Oise (60)",
+    "departement": "60157"
+  },
+  {
+    "ville": "60159",
+    "departement": "Compiègne"
+  },
+  {
+    "ville": "60612",
+    "departement": "Senlis"
+  },
+  {
+    "ville": "Orne (61)",
+    "departement": "61006"
+  },
+  {
+    "ville": "61293",
+    "departement": "Mortagne-au-Perche"
+  },
+  {
+    "ville": "Pas-de-Calais (62)",
+    "departement": "62119"
+  },
+  {
+    "ville": "62160",
+    "departement": "Boulogne-sur-Mer"
+  },
+  {
+    "ville": "62193",
+    "departement": "Calais"
+  },
+  {
+    "ville": "62498",
+    "departement": "Lens"
+  },
+  {
+    "ville": "62588",
+    "departement": "Montreuil-sur-Mer"
+  },
+  {
+    "ville": "62765",
+    "departement": "Saint-Omer"
+  },
+  {
+    "ville": "Puy-de-Dôme (63)",
+    "departement": "63003"
+  },
+  {
+    "ville": "63178",
+    "departement": "Issoire"
+  },
+  {
+    "ville": "63300",
+    "departement": "Riom"
+  },
+  {
+    "ville": "63430",
+    "departement": "Thiers"
+  },
+  {
+    "ville": "Pyrénées-Atlantiques (64)",
+    "departement": "64102"
+  },
+  {
+    "ville": "64422",
+    "departement": "Oloron-Sainte-Marie"
+  },
+  {
+    "ville": "Hautes-Pyrénées (65)",
+    "departement": "65025"
+  },
+  {
+    "ville": "65059",
+    "departement": "Bagnères-de-Bigorre"
+  },
+  {
+    "ville": "Pyrénées-Orientales (66)",
+    "departement": "66049"
+  },
+  {
+    "ville": "66149",
+    "departement": "Prades"
+  },
+  {
+    "ville": "Bas-Rhin (67)",
+    "departement": "67180"
+  },
+  {
+    "ville": "67300",
+    "departement": "Molsheim"
+  },
+  {
+    "ville": "67437",
+    "departement": "Saverne"
+  },
+  {
+    "ville": "67462",
+    "departement": "Sélestat"
+  },
+  {
+    "ville": "Haut-Rhin (68)",
+    "departement": "68004"
+  },
+  {
+    "ville": "68224",
+    "departement": "Mulhouse"
+  },
+  {
+    "ville": "68334",
+    "departement": "Thann"
+  },
+  {
+    "ville": "Rhône (69)",
+    "departement": "69264"
+  },
+  {
+    "ville": "Haute-Saône (70)",
+    "departement": "70310"
+  },
+  {
+    "ville": "Saône-et-Loire (71)",
+    "departement": "71014"
+  },
+  {
+    "ville": "71076",
+    "departement": "Chalon-sur-Saône"
+  },
+  {
+    "ville": "71106",
+    "departement": "Charolles"
+  },
+  {
+    "ville": "71263",
+    "departement": "Louhans-Châteaurenaud"
+  },
+  {
+    "ville": "Sarthe (72)",
+    "departement": "72154"
+  },
+  {
+    "ville": "72180",
+    "departement": "Mamers"
+  },
+  {
+    "ville": "Savoie (73)",
+    "departement": "73011"
+  },
+  {
+    "ville": "73248",
+    "departement": "Saint-Jean-de-Maurienne"
+  },
+  {
+    "ville": "Haute-Savoie (74)",
+    "departement": "74042"
+  },
+  {
+    "ville": "74243",
+    "departement": "Saint-Julien-en-Genevois"
+  },
+  {
+    "ville": "74281",
+    "departement": "Thonon-les-Bains"
+  },
+  {
+    "ville": "Paris (75)",
+    "departement": "pas de sous-préfecture"
+  },
+  {
+    "ville": "Seine-Maritime (76)",
+    "departement": "76217"
+  },
+  {
+    "ville": "76351",
+    "departement": "Le Havre"
+  },
+  {
+    "ville": "Seine-et-Marne (77)",
+    "departement": "77186"
+  },
+  {
+    "ville": "77284",
+    "departement": "Meaux"
+  },
+  {
+    "ville": "77379",
+    "departement": "Provins"
+  },
+  {
+    "ville": "77468",
+    "departement": "Torcy"
+  },
+  {
+    "ville": "Yvelines (78)",
+    "departement": "78361"
+  },
+  {
+    "ville": "78517",
+    "departement": "Rambouillet"
+  },
+  {
+    "ville": "78551",
+    "departement": "Saint-Germain-en-Laye"
+  },
+  {
+    "ville": "Deux-Sèvres (79)",
+    "departement": "79049"
+  },
+  {
+    "ville": "79202",
+    "departement": "Parthenay"
+  },
+  {
+    "ville": "Somme (80)",
+    "departement": "80001"
+  },
+  {
+    "ville": "80561",
+    "departement": "Montdidier"
+  },
+  {
+    "ville": "80620",
+    "departement": "Péronne"
+  },
+  {
+    "ville": "Tarn (81)",
+    "departement": "81065"
+  },
+  {
+    "ville": "Tarn-et-Garonne (82)",
+    "departement": "82033"
+  },
+  {
+    "ville": "Var (83)",
+    "departement": "83023"
+  },
+  {
+    "ville": "83050",
+    "departement": "Draguignan"
+  },
+  {
+    "ville": "Vaucluse (84)",
+    "departement": "84003"
+  },
+  {
+    "ville": "84031",
+    "departement": "Carpentras"
+  },
+  {
+    "ville": "Vendée (85)",
+    "departement": "85092"
+  },
+  {
+    "ville": "85194",
+    "departement": "Les Sables-d'Olonne"
+  },
+  {
+    "ville": "Vienne (86)",
+    "departement": "86066"
+  },
+  {
+    "ville": "86165",
+    "departement": "Montmorillon"
+  },
+  {
+    "ville": "Haute-Vienne (87)",
+    "departement": "87011"
+  },
+  {
+    "ville": "87126",
+    "departement": "Rochechouart"
+  },
+  {
+    "ville": "Vosges (88)",
+    "departement": "88321"
+  },
+  {
+    "ville": "88413",
+    "departement": "Saint-Dié-des-Vosges"
+  },
+  {
+    "ville": "Yonne (89)",
+    "departement": "89025"
+  },
+  {
+    "ville": "89387",
+    "departement": "Sens"
+  },
+  {
+    "ville": "Territoire de Belfort (90)",
+    "departement": "pas de sous-préfecture"
+  },
+  {
+    "ville": "Essonne (91)",
+    "departement": "91223"
+  },
+  {
+    "ville": "91477",
+    "departement": "Palaiseau"
+  },
+  {
+    "ville": "Hauts-de-Seine (92)",
+    "departement": "92002"
+  },
+  {
+    "ville": "92012",
+    "departement": "Boulogne-Billancourt"
+  },
+  {
+    "ville": "Seine-Saint-Denis (93)",
+    "departement": "93062"
+  },
+  {
+    "ville": "93066",
+    "departement": "Saint-Denis"
+  },
+  {
+    "ville": "Val-de-Marne (94)",
+    "departement": "94038"
+  },
+  {
+    "ville": "94052",
+    "departement": "Nogent-sur-Marne"
+  },
+  {
+    "ville": "Val-d'Oise (95)",
+    "departement": "95018"
+  },
+  {
+    "ville": "95585",
+    "departement": "Sarcelles"
+  },
+  {
+    "ville": "Guadeloupe (971)",
+    "departement": "97120"
+  },
+  {
+    "ville": "Martinique (972)",
+    "departement": "97230"
+  },
+  {
+    "ville": "97217",
+    "departement": "Le Marin"
+  },
+  {
+    "ville": "97225",
+    "departement": "Saint-Pierre"
+  },
+  {
+    "ville": "Guyane (973)",
+    "departement": "97308"
+  },
+  {
+    "ville": "97311",
+    "departement": "Saint-Laurent-du-Maroni"
+  },
+  {
+    "ville": "La Réunion (974)",
+    "departement": "97410"
+  },
+  {
+    "ville": "97415",
+    "departement": "Saint-Paul"
+  },
+  {
+    "ville": "97416",
+    "departement": "Saint-Pierre"
+  },
+  {
+    "ville": "Mayotte (976)",
+    "departement": "pas de sous-préfecture"
+  }
+]

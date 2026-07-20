@@ -1,0 +1,3354 @@
+[
+  [
+    [
+      "Dép.",
+      "CodeInsee",
+      "Arrondissement",
+      "Chef-lieu",
+      "Population(dernière pop. légale)",
+      "Superficie(km2)",
+      "Densité(hab./km2)",
+      "Communes(2024)"
+    ],
+    [
+      "01",
+      "011",
+      "Arrondissement de Belley",
+      "Belley",
+      "127 914",
+      "1 584,2",
+      "80,7",
+      "104"
+    ],
+    [
+      "01",
+      "012",
+      "Arrondissement de Bourg-en-Bresse",
+      "Bourg-en-Bresse",
+      "349 343",
+      "2 873,7",
+      "121,6",
+      "199"
+    ],
+    [
+      "01",
+      "013",
+      "Arrondissement de Gex",
+      "Gex",
+      "107 091",
+      "404,9",
+      "264,5",
+      "27"
+    ],
+    [
+      "01",
+      "014",
+      "Arrondissement de Nantua",
+      "Nantua",
+      "94 996",
+      "899,6",
+      "105,6",
+      "62"
+    ],
+    [
+      "02",
+      "021",
+      "Arrondissement de Château-Thierry",
+      "Château-Thierry",
+      "69 264",
+      "1 115,2",
+      "62,1",
+      "108"
+    ],
+    [
+      "02",
+      "022",
+      "Arrondissement de Laon",
+      "Laon",
+      "153 092",
+      "2 175,3",
+      "70,4",
+      "240"
+    ],
+    [
+      "02",
+      "023",
+      "Arrondissement de Saint-Quentin",
+      "Saint-Quentin",
+      "125 503",
+      "1 071,2",
+      "117,2",
+      "126"
+    ],
+    [
+      "02",
+      "024",
+      "Arrondissement de Soissons",
+      "Soissons",
+      "106 668",
+      "1 342,3",
+      "79,5",
+      "164"
+    ],
+    [
+      "02",
+      "025",
+      "Arrondissement de Vervins",
+      "Vervins",
+      "68 815",
+      "1 657,8",
+      "41,5",
+      "160"
+    ],
+    [
+      "03",
+      "031",
+      "Arrondissement de Montluçon",
+      "Montluçon",
+      "104 414",
+      "2 116,8",
+      "48,1",
+      "90"
+    ],
+    [
+      "03",
+      "032",
+      "Arrondissement de Moulins",
+      "Moulins",
+      "76 068",
+      "2 957,9",
+      "37,7",
+      "67"
+    ],
+    [
+      "03",
+      "033",
+      "Arrondissement de Vichy",
+      "Vichy",
+      "152 816",
+      "2 265,5",
+      "48,5",
+      "160"
+    ],
+    [
+      "04",
+      "041",
+      "Arrondissement de Barcelonnette",
+      "Barcelonnette",
+      "7 737",
+      "1 027,7",
+      "7,5",
+      "14"
+    ],
+    [
+      "04",
+      "042",
+      "Arrondissement de Castellane",
+      "Castellane",
+      "11 495",
+      "1 718,1",
+      "6,7",
+      "41"
+    ],
+    [
+      "04",
+      "043",
+      "Arrondissement de Digne-les-Bains",
+      "Digne-les-Bains",
+      "49 137",
+      "1 574",
+      "31,2",
+      "46"
+    ],
+    [
+      "04",
+      "044",
+      "Arrondissement de Forcalquier",
+      "Forcalquier",
+      "99 685",
+      "2 605,4",
+      "38,3",
+      "97"
+    ],
+    [
+      "05",
+      "051",
+      "Arrondissement de Briançon",
+      "Briançon",
+      "34 129",
+      "2 138,1",
+      "16",
+      "36"
+    ],
+    [
+      "05",
+      "052",
+      "Arrondissement de Gap",
+      "Gap",
+      "109 338",
+      "3 410,5",
+      "32,1",
+      "126"
+    ],
+    [
+      "06",
+      "061",
+      "Arrondissement de Grasse",
+      "Grasse",
+      "587 779",
+      "1 231,2",
+      "477,4",
+      "62"
+    ],
+    [
+      "06",
+      "062",
+      "Arrondissement de Nice",
+      "Nice",
+      "540 639",
+      "3 067,4",
+      "176,3",
+      "101"
+    ],
+    [
+      "07",
+      "071",
+      "Arrondissement de Largentière",
+      "Largentière",
+      "104 582",
+      "2 646,4",
+      "39,5",
+      "151"
+    ],
+    [
+      "07",
+      "072",
+      "Arrondissement de Privas",
+      "Privas",
+      "86 594",
+      "1 145,5",
+      "75,6",
+      "66"
+    ],
+    [
+      "07",
+      "073",
+      "Arrondissement de Tournon-sur-Rhône",
+      "Tournon-sur-Rhône",
+      "143 055",
+      "1 736,8",
+      "82,4",
+      "118"
+    ],
+    [
+      "08",
+      "081",
+      "Arrondissement de Charleville-Mézières",
+      "Charleville-Mézières",
+      "151 970",
+      "1 825,3",
+      "83,3",
+      "157"
+    ],
+    [
+      "08",
+      "082",
+      "Arrondissement de Rethel",
+      "Rethel",
+      "37 147",
+      "1 199,7",
+      "31",
+      "101"
+    ],
+    [
+      "08",
+      "083",
+      "Arrondissement de Sedan",
+      "Sedan",
+      "56 088",
+      "792,2",
+      "70,8",
+      "72"
+    ],
+    [
+      "08",
+      "084",
+      "Arrondissement de Vouziers",
+      "Vouziers",
+      "20 688",
+      "1 412,2",
+      "14,6",
+      "118"
+    ],
+    [
+      "09",
+      "091",
+      "Arrondissement de Foix",
+      "Foix",
+      "48 575",
+      "1 818,5",
+      "26,7",
+      "114"
+    ],
+    [
+      "09",
+      "092",
+      "Arrondissement de Pamiers",
+      "Pamiers",
+      "66 001",
+      "1 052,2",
+      "62,7",
+      "91"
+    ],
+    [
+      "09",
+      "093",
+      "Arrondissement de Saint-Girons",
+      "Saint-Girons",
+      "41 146",
+      "2 019,3",
+      "20,4",
+      "121"
+    ],
+    [
+      "10",
+      "101",
+      "Arrondissement de Bar-sur-Aube",
+      "Bar-sur-Aube",
+      "26 533",
+      "1 240,1",
+      "21,4",
+      "108"
+    ],
+    [
+      "10",
+      "102",
+      "Arrondissement de Nogent-sur-Seine",
+      "Nogent-sur-Seine",
+      "53 899",
+      "1 223,6",
+      "44",
+      "79"
+    ],
+    [
+      "10",
+      "103",
+      "Arrondissement de Troyes",
+      "Troyes",
+      "230 015",
+      "3 540,4",
+      "65",
+      "244"
+    ],
+    [
+      "11",
+      "111",
+      "Arrondissement de Carcassonne",
+      "Carcassonne",
+      "163 632",
+      "2 309,7",
+      "70,8",
+      "186"
+    ],
+    [
+      "11",
+      "112",
+      "Arrondissement de Limoux",
+      "Limoux",
+      "42 820",
+      "1 727,3",
+      "24,8",
+      "138"
+    ],
+    [
+      "11",
+      "113",
+      "Arrondissement de Narbonne",
+      "Narbonne",
+      "173 196",
+      "2 101,9",
+      "82,4",
+      "109"
+    ],
+    [
+      "12",
+      "121",
+      "Arrondissement de Millau",
+      "Millau",
+      "79 819",
+      "3 741,7",
+      "21,3",
+      "110"
+    ],
+    [
+      "12",
+      "122",
+      "Arrondissement de Rodez",
+      "Rodez",
+      "112 500",
+      "2 869,7",
+      "39,2",
+      "79"
+    ],
+    [
+      "12",
+      "123",
+      "Arrondissement de Villefranche-de-Rouergue",
+      "Villefranche-de-Rouergue",
+      "87 290",
+      "2 123,7",
+      "41,1",
+      "96"
+    ],
+    [
+      "13",
+      "131",
+      "Arrondissement d'Aix-en-Provence",
+      "Aix-en-Provence",
+      "469 172",
+      "1 657,5",
+      "283,1",
+      "48"
+    ],
+    [
+      "13",
+      "132",
+      "Arrondissement d'Arles",
+      "Arles",
+      "174 008",
+      "2 031,5",
+      "85,7",
+      "29"
+    ],
+    [
+      "13",
+      "133",
+      "Arrondissement de Marseille",
+      "Marseille",
+      "1 106 776",
+      "683,2",
+      "1 620",
+      "21"
+    ],
+    [
+      "13",
+      "134",
+      "Arrondissement d'Istres",
+      "Istres",
+      "337 702",
+      "715,2",
+      "472,2",
+      "21"
+    ],
+    [
+      "14",
+      "141",
+      "Arrondissement de Bayeux",
+      "Bayeux",
+      "73 808",
+      "976,6",
+      "75,6",
+      "123"
+    ],
+    [
+      "14",
+      "142",
+      "Arrondissement de Caen",
+      "Caen",
+      "403 821",
+      "1 595,7",
+      "253,1",
+      "201"
+    ],
+    [
+      "14",
+      "143",
+      "Arrondissement de Lisieux",
+      "Lisieux",
+      "160 503",
+      "1 756,2",
+      "91,4",
+      "160"
+    ],
+    [
+      "14",
+      "144",
+      "Arrondissement de Vire",
+      "Vire Normandie",
+      "71 309",
+      "1 205,9",
+      "59,1",
+      "44"
+    ],
+    [
+      "15",
+      "151",
+      "Arrondissement d'Aurillac",
+      "Aurillac",
+      "82 855",
+      "1 936,9",
+      "42,8",
+      "93"
+    ],
+    [
+      "15",
+      "152",
+      "Arrondissement de Mauriac",
+      "Mauriac",
+      "24 881",
+      "1 278,5",
+      "19,5",
+      "55"
+    ],
+    [
+      "15",
+      "153",
+      "Arrondissement de Saint-Flour",
+      "Saint-Flour",
+      "36 460",
+      "2 510,6",
+      "14,5",
+      "98"
+    ],
+    [
+      "16",
+      "161",
+      "Arrondissement d'Angoulême",
+      "Angoulême",
+      "182 424",
+      "1 867,6",
+      "97,7",
+      "115"
+    ],
+    [
+      "16",
+      "162",
+      "Arrondissement de Cognac",
+      "Cognac",
+      "99 106",
+      "1 670,8",
+      "59,3",
+      "107"
+    ],
+    [
+      "16",
+      "163",
+      "Arrondissement de Confolens",
+      "Confolens",
+      "71 153",
+      "2 417,6",
+      "29,4",
+      "140"
+    ],
+    [
+      "17",
+      "171",
+      "Arrondissement de Jonzac",
+      "Jonzac",
+      "69 164",
+      "1 740,1",
+      "39,7",
+      "129"
+    ],
+    [
+      "17",
+      "172",
+      "Arrondissement de Rochefort",
+      "Rochefort",
+      "197 040",
+      "1 534,6",
+      "128,4",
+      "78"
+    ],
+    [
+      "17",
+      "173",
+      "Arrondissement de la Rochelle",
+      "La Rochelle",
+      "233 243",
+      "852,8",
+      "273,5",
+      "58"
+    ],
+    [
+      "17",
+      "174",
+      "Arrondissement de Saintes",
+      "Saintes",
+      "120 058",
+      "1 320,4",
+      "90,9",
+      "88"
+    ],
+    [
+      "17",
+      "175",
+      "Arrondissement de Saint-Jean-d'Angély",
+      "Saint-Jean-d'Angély",
+      "52 774",
+      "1 416",
+      "37,3",
+      "110"
+    ],
+    [
+      "18",
+      "181",
+      "Arrondissement de Bourges",
+      "Bourges",
+      "170 509",
+      "2 783,9",
+      "61,2",
+      "128"
+    ],
+    [
+      "18",
+      "182",
+      "Arrondissement de Saint-Amand-Montrond",
+      "Saint-Amand-Montrond",
+      "60 842",
+      "2 683,7",
+      "22,7",
+      "115"
+    ],
+    [
+      "18",
+      "183",
+      "Arrondissement de Vierzon",
+      "Vierzon",
+      "67 309",
+      "1 767,4",
+      "38,1",
+      "43"
+    ],
+    [
+      "19",
+      "191",
+      "Arrondissement de Brive-la-Gaillarde",
+      "Brive-la-Gaillarde",
+      "129 791",
+      "1 471,2",
+      "88,2",
+      "96"
+    ],
+    [
+      "19",
+      "192",
+      "Arrondissement de Tulle",
+      "Tulle",
+      "70 756",
+      "2 363,7",
+      "29,9",
+      "105"
+    ],
+    [
+      "19",
+      "193",
+      "Arrondissement d'Ussel",
+      "Ussel",
+      "40 279",
+      "2 021,9",
+      "19,9",
+      "78"
+    ],
+    [
+      "2A",
+      "2A1",
+      "Arrondissement d'Ajaccio",
+      "Ajaccio",
+      "125 120",
+      "2 224,4",
+      "56,2",
+      "81"
+    ],
+    [
+      "2A",
+      "2A4",
+      "Arrondissement de Sartène",
+      "Sartène",
+      "43 186",
+      "1 789,9",
+      "24,1",
+      "43"
+    ],
+    [
+      "2B",
+      "2B2",
+      "Arrondissement de Bastia",
+      "Bastia",
+      "93 433",
+      "473,8",
+      "197,2",
+      "27"
+    ],
+    [
+      "2B",
+      "2B3",
+      "Arrondissement de Corte",
+      "Corte",
+      "61 924",
+      "2 853,4",
+      "21,7",
+      "158"
+    ],
+    [
+      "2B",
+      "2B5",
+      "Arrondissement de Calvi",
+      "Calvi",
+      "31 823",
+      "1 338,4",
+      "23,8",
+      "51"
+    ],
+    [
+      "21",
+      "211",
+      "Arrondissement de Beaune",
+      "Beaune",
+      "109 203",
+      "2 359,1",
+      "46,3",
+      "222"
+    ],
+    [
+      "21",
+      "212",
+      "Arrondissement de Dijon",
+      "Dijon",
+      "373 323",
+      "2 808,2",
+      "132,9",
+      "224"
+    ],
+    [
+      "21",
+      "213",
+      "Arrondissement de Montbard",
+      "Montbard",
+      "57 574",
+      "3 595,9",
+      "16",
+      "252"
+    ],
+    [
+      "22",
+      "221",
+      "Arrondissement de Dinan",
+      "Dinan",
+      "107 310",
+      "984,9",
+      "109",
+      "67"
+    ],
+    [
+      "22",
+      "222",
+      "Arrondissement de Guingamp",
+      "Guingamp",
+      "126 751",
+      "2 292,3",
+      "55,3",
+      "111"
+    ],
+    [
+      "22",
+      "223",
+      "Arrondissement de Lannion",
+      "Lannion",
+      "101 029",
+      "904,4",
+      "111,7",
+      "57"
+    ],
+    [
+      "22",
+      "224",
+      "Arrondissement de Saint-Brieuc",
+      "Saint-Brieuc",
+      "276 769",
+      "2 696",
+      "102,7",
+      "113"
+    ],
+    [
+      "23",
+      "231",
+      "Arrondissement d'Aubusson",
+      "Aubusson",
+      "42 909",
+      "2 828,7",
+      "15,2",
+      "129"
+    ],
+    [
+      "23",
+      "232",
+      "Arrondissement de Guéret",
+      "Guéret",
+      "72 618",
+      "2 736,7",
+      "26,5",
+      "127"
+    ],
+    [
+      "24",
+      "241",
+      "Arrondissement de Bergerac",
+      "Bergerac",
+      "103 849",
+      "1 819,9",
+      "57,1",
+      "130"
+    ],
+    [
+      "24",
+      "242",
+      "Arrondissement de Nontron",
+      "Nontron",
+      "54 720",
+      "2 097,7",
+      "26,1",
+      "94"
+    ],
+    [
+      "24",
+      "243",
+      "Arrondissement de Périgueux",
+      "Périgueux",
+      "177 114",
+      "2 869,3",
+      "61,7",
+      "143"
+    ],
+    [
+      "24",
+      "244",
+      "Arrondissement de Sarlat-la-Canéda",
+      "Sarlat-la-Canéda",
+      "81 931",
+      "2 273,1",
+      "36",
+      "136"
+    ],
+    [
+      "25",
+      "251",
+      "Arrondissement de Besançon",
+      "Besançon",
+      "253 337",
+      "1 926,4",
+      "131,5",
+      "254"
+    ],
+    [
+      "25",
+      "252",
+      "Arrondissement de Montbéliard",
+      "Montbéliard",
+      "173 879",
+      "1 255,7",
+      "138,5",
+      "168"
+    ],
+    [
+      "25",
+      "253",
+      "Arrondissement de Pontarlier",
+      "Pontarlier",
+      "119 947",
+      "2 050,5",
+      "58,5",
+      "147"
+    ],
+    [
+      "26",
+      "261",
+      "Arrondissement de Die",
+      "Die",
+      "69 414",
+      "2 535,6",
+      "27,4",
+      "112"
+    ],
+    [
+      "26",
+      "262",
+      "Arrondissement de Nyons",
+      "Nyons",
+      "153 748",
+      "2 478,1",
+      "62",
+      "150"
+    ],
+    [
+      "26",
+      "263",
+      "Arrondissement de Valence",
+      "Valence",
+      "301 045",
+      "1 516,3",
+      "198,5",
+      "101"
+    ],
+    [
+      "27",
+      "271",
+      "Arrondissement des Andelys",
+      "Les Andelys",
+      "240 581",
+      "1 854,4",
+      "129,7",
+      "185"
+    ],
+    [
+      "27",
+      "272",
+      "Arrondissement de Bernay",
+      "Bernay",
+      "219 882",
+      "3 226,7",
+      "68,1",
+      "297"
+    ],
+    [
+      "27",
+      "273",
+      "Arrondissement d'Évreux",
+      "Évreux",
+      "142 251",
+      "958,7",
+      "148,4",
+      "103"
+    ],
+    [
+      "28",
+      "281",
+      "Arrondissement de Chartres",
+      "Chartres",
+      "210 717",
+      "2 129,5",
+      "99",
+      "148"
+    ],
+    [
+      "28",
+      "282",
+      "Arrondissement de Châteaudun",
+      "Châteaudun",
+      "57 194",
+      "1 438,8",
+      "39,8",
+      "61"
+    ],
+    [
+      "28",
+      "283",
+      "Arrondissement de Dreux",
+      "Dreux",
+      "130 373",
+      "1 500,5",
+      "86,9",
+      "108"
+    ],
+    [
+      "28",
+      "284",
+      "Arrondissement de Nogent-le-Rotrou",
+      "Nogent-le-Rotrou",
+      "34 845",
+      "811,1",
+      "43",
+      "48"
+    ],
+    [
+      "29",
+      "291",
+      "Arrondissement de Brest",
+      "Brest",
+      "386 563",
+      "1 396,2",
+      "276,9",
+      "77"
+    ],
+    [
+      "29",
+      "292",
+      "Arrondissement de Châteaulin",
+      "Châteaulin",
+      "82 249",
+      "1 756,6",
+      "46,8",
+      "57"
+    ],
+    [
+      "29",
+      "293",
+      "Arrondissement de Morlaix",
+      "Morlaix",
+      "131 642",
+      "1 330,6",
+      "98,9",
+      "59"
+    ],
+    [
+      "29",
+      "294",
+      "Arrondissement de Quimper",
+      "Quimper",
+      "333 001",
+      "2 249,6",
+      "148",
+      "84"
+    ],
+    [
+      "30",
+      "301",
+      "Arrondissement d'Alès",
+      "Alès",
+      "156 595",
+      "1 304,2",
+      "120,1",
+      "95"
+    ],
+    [
+      "30",
+      "302",
+      "Arrondissement de Nîmes",
+      "Nîmes",
+      "574 325",
+      "3 158,1",
+      "181,9",
+      "181"
+    ],
+    [
+      "30",
+      "303",
+      "Arrondissement du Vigan",
+      "Le Vigan",
+      "40 020",
+      "1 390,6",
+      "28,8",
+      "74"
+    ],
+    [
+      "31",
+      "311",
+      "Arrondissement de Muret",
+      "Muret",
+      "237 472",
+      "1 630,9",
+      "145,6",
+      "126"
+    ],
+    [
+      "31",
+      "312",
+      "Arrondissement de Saint-Gaudens",
+      "Saint-Gaudens",
+      "77 626",
+      "2 139,6",
+      "36,3",
+      "235"
+    ],
+    [
+      "31",
+      "313",
+      "Arrondissement de Toulouse",
+      "Toulouse",
+      "1 156 370",
+      "2 538,9",
+      "455,5",
+      "225"
+    ],
+    [
+      "32",
+      "321",
+      "Arrondissement d'Auch",
+      "Auch",
+      "84 005",
+      "1 923,5",
+      "43,7",
+      "134"
+    ],
+    [
+      "32",
+      "322",
+      "Arrondissement de Condom",
+      "Condom",
+      "67 424",
+      "2 462,2",
+      "27,4",
+      "162"
+    ],
+    [
+      "32",
+      "323",
+      "Arrondissement de Mirande",
+      "Mirande",
+      "41 216",
+      "1 871,2",
+      "22",
+      "165"
+    ],
+    [
+      "33",
+      "331",
+      "Arrondissement de Blaye",
+      "Blaye",
+      "96 249",
+      "782,4",
+      "123",
+      "62"
+    ],
+    [
+      "33",
+      "332",
+      "Arrondissement de Bordeaux",
+      "Bordeaux",
+      "1 038 899",
+      "1 521,8",
+      "682,7",
+      "82"
+    ],
+    [
+      "33",
+      "333",
+      "Arrondissement de Langon",
+      "Langon",
+      "135 533",
+      "2 644,3",
+      "51,3",
+      "196"
+    ],
+    [
+      "33",
+      "334",
+      "Arrondissement de Lesparre-Médoc",
+      "Lesparre-Médoc",
+      "96 078",
+      "2 274,4",
+      "42,2",
+      "49"
+    ],
+    [
+      "33",
+      "335",
+      "Arrondissement de Libourne",
+      "Libourne",
+      "157 782",
+      "1 282,9",
+      "123",
+      "129"
+    ],
+    [
+      "33",
+      "336",
+      "Arrondissement d'Arcachon",
+      "Arcachon",
+      "165 952",
+      "1 469,8",
+      "112,9",
+      "17"
+    ],
+    [
+      "34",
+      "341",
+      "Arrondissement de Béziers",
+      "Béziers",
+      "329 046",
+      "3 091,2",
+      "106,4",
+      "153"
+    ],
+    [
+      "34",
+      "342",
+      "Arrondissement de Lodève",
+      "Lodève",
+      "148 799",
+      "2 005",
+      "74,2",
+      "122"
+    ],
+    [
+      "34",
+      "343",
+      "Arrondissement de Montpellier",
+      "Montpellier",
+      "752 444",
+      "1 004,8",
+      "748,8",
+      "67"
+    ],
+    [
+      "35",
+      "351",
+      "Arrondissement de Fougères-Vitré",
+      "Fougères",
+      "188 992",
+      "2 173,2",
+      "87",
+      "105"
+    ],
+    [
+      "35",
+      "352",
+      "Arrondissement de Redon",
+      "Redon",
+      "106 782",
+      "1 302,6",
+      "82",
+      "50"
+    ],
+    [
+      "35",
+      "353",
+      "Arrondissement de Rennes",
+      "Rennes",
+      "649 829",
+      "2 228,4",
+      "291,6",
+      "109"
+    ],
+    [
+      "35",
+      "354",
+      "Arrondissement de Saint-Malo",
+      "Saint-Malo",
+      "175 063",
+      "1 070,6",
+      "163,5",
+      "68"
+    ],
+    [
+      "36",
+      "361",
+      "Arrondissement du Blanc",
+      "Le Blanc",
+      "30 322",
+      "1 782,3",
+      "17",
+      "57"
+    ],
+    [
+      "36",
+      "362",
+      "Arrondissement de Châteauroux",
+      "Châteauroux",
+      "125 603",
+      "2 621,9",
+      "47,9",
+      "84"
+    ],
+    [
+      "36",
+      "363",
+      "Arrondissement de la Châtre",
+      "La Châtre",
+      "27 440",
+      "1 204,2",
+      "22,8",
+      "51"
+    ],
+    [
+      "36",
+      "364",
+      "Arrondissement d'Issoudun",
+      "Issoudun",
+      "32 704",
+      "1 182,3",
+      "27,7",
+      "49"
+    ],
+    [
+      "37",
+      "371",
+      "Arrondissement de Chinon",
+      "Chinon",
+      "104 349",
+      "2 296,5",
+      "45,4",
+      "106"
+    ],
+    [
+      "37",
+      "372",
+      "Arrondissement de Tours",
+      "Tours",
+      "397 913",
+      "1 087,6",
+      "365,9",
+      "54"
+    ],
+    [
+      "37",
+      "373",
+      "Arrondissement de Loches",
+      "Loches",
+      "117 100",
+      "2 742,5",
+      "42,7",
+      "112"
+    ],
+    [
+      "38",
+      "381",
+      "Arrondissement de Grenoble",
+      "Grenoble",
+      "753 318",
+      "4 398,7",
+      "171,3",
+      "263"
+    ],
+    [
+      "38",
+      "382",
+      "Arrondissement de La Tour-du-Pin",
+      "La Tour-du-Pin",
+      "320 732",
+      "1 543,1",
+      "207,8",
+      "136"
+    ],
+    [
+      "38",
+      "383",
+      "Arrondissement de Vienne",
+      "Vienne",
+      "224 940",
+      "1 489,7",
+      "151",
+      "113"
+    ],
+    [
+      "39",
+      "391",
+      "Arrondissement de Dole",
+      "Dole",
+      "105 872",
+      "1 769,5",
+      "59,8",
+      "190"
+    ],
+    [
+      "39",
+      "392",
+      "Arrondissement de Lons-le-Saunier",
+      "Lons-le-Saunier",
+      "104 048",
+      "2 271,9",
+      "45,8",
+      "249"
+    ],
+    [
+      "39",
+      "393",
+      "Arrondissement de Saint-Claude",
+      "Saint-Claude",
+      "48 053",
+      "957,8",
+      "50,2",
+      "55"
+    ],
+    [
+      "40",
+      "401",
+      "Arrondissement de Dax",
+      "Dax",
+      "243 517",
+      "3 194,2",
+      "76,2",
+      "152"
+    ],
+    [
+      "40",
+      "402",
+      "Arrondissement de Mont-de-Marsan",
+      "Mont-de-Marsan",
+      "190 053",
+      "6 048,4",
+      "31,4",
+      "175"
+    ],
+    [
+      "41",
+      "411",
+      "Arrondissement de Blois",
+      "Blois",
+      "151 546",
+      "1 950,2",
+      "77,7",
+      "93"
+    ],
+    [
+      "41",
+      "412",
+      "Arrondissement de Vendôme",
+      "Vendôme",
+      "67 208",
+      "1 722,3",
+      "39",
+      "100"
+    ],
+    [
+      "41",
+      "413",
+      "Arrondissement de Romorantin-Lanthenay",
+      "Romorantin-Lanthenay",
+      "109 789",
+      "2 670,9",
+      "41,1",
+      "74"
+    ],
+    [
+      "42",
+      "421",
+      "Arrondissement de Montbrison",
+      "Montbrison",
+      "187 661",
+      "1 943,2",
+      "96,6",
+      "135"
+    ],
+    [
+      "42",
+      "422",
+      "Arrondissement de Roanne",
+      "Roanne",
+      "158 626",
+      "1 779,9",
+      "89,1",
+      "113"
+    ],
+    [
+      "42",
+      "423",
+      "Arrondissement de Saint-Étienne",
+      "Saint-Étienne",
+      "427 846",
+      "1 057,5",
+      "404,6",
+      "75"
+    ],
+    [
+      "43",
+      "431",
+      "Arrondissement de Brioude",
+      "Brioude",
+      "44 915",
+      "1 886,8",
+      "23,8",
+      "111"
+    ],
+    [
+      "43",
+      "432",
+      "Arrondissement du Puy-en-Velay",
+      "Le Puy-en-Velay",
+      "97 009",
+      "1 930,7",
+      "50,2",
+      "102"
+    ],
+    [
+      "43",
+      "433",
+      "Arrondissement d'Yssingeaux",
+      "Yssingeaux",
+      "86 730",
+      "1 159,7",
+      "74,8",
+      "44"
+    ],
+    [
+      "44",
+      "442",
+      "Arrondissement de Nantes",
+      "Nantes",
+      "895 982",
+      "1 958,7",
+      "457,4",
+      "76"
+    ],
+    [
+      "44",
+      "443",
+      "Arrondissement de Saint-Nazaire",
+      "Saint-Nazaire",
+      "355 480",
+      "1 758,1",
+      "202,2",
+      "55"
+    ],
+    [
+      "44",
+      "445",
+      "Arrondissement de Châteaubriant-Ancenis",
+      "Châteaubriant",
+      "236 108",
+      "3 157,6",
+      "74,8",
+      "76"
+    ],
+    [
+      "45",
+      "451",
+      "Arrondissement de Montargis",
+      "Montargis",
+      "168 928",
+      "2 657,2",
+      "63,6",
+      "125"
+    ],
+    [
+      "45",
+      "452",
+      "Arrondissement d'Orléans",
+      "Orléans",
+      "460 044",
+      "2 925,4",
+      "157,3",
+      "121"
+    ],
+    [
+      "45",
+      "453",
+      "Arrondissement de Pithiviers",
+      "Pithiviers",
+      "62 296",
+      "1 192,7",
+      "52,2",
+      "79"
+    ],
+    [
+      "46",
+      "461",
+      "Arrondissement de Cahors",
+      "Cahors",
+      "74 215",
+      "1 860,9",
+      "39,9",
+      "98"
+    ],
+    [
+      "46",
+      "462",
+      "Arrondissement de Figeac",
+      "Figeac",
+      "55 076",
+      "1 593,3",
+      "34,6",
+      "118"
+    ],
+    [
+      "46",
+      "463",
+      "Arrondissement de Gourdon",
+      "Gourdon",
+      "47 182",
+      "1 762,3",
+      "26,8",
+      "97"
+    ],
+    [
+      "47",
+      "471",
+      "Arrondissement d'Agen",
+      "Agen",
+      "120 719",
+      "1 013,3",
+      "119,1",
+      "71"
+    ],
+    [
+      "47",
+      "472",
+      "Arrondissement de Marmande",
+      "Marmande",
+      "84 226",
+      "1 387,7",
+      "60,7",
+      "98"
+    ],
+    [
+      "47",
+      "473",
+      "Arrondissement de Villeneuve-sur-Lot",
+      "Villeneuve-sur-Lot",
+      "89 968",
+      "1 559,7",
+      "57,7",
+      "92"
+    ],
+    [
+      "47",
+      "474",
+      "Arrondissement de Nérac",
+      "Nérac",
+      "38 689",
+      "1 400,3",
+      "27,6",
+      "58"
+    ],
+    [
+      "48",
+      "481",
+      "Arrondissement de Florac",
+      "Florac Trois Rivières",
+      "13 088",
+      "1 687,5",
+      "7,8",
+      "38"
+    ],
+    [
+      "48",
+      "482",
+      "Arrondissement de Mende",
+      "Mende",
+      "63 398",
+      "3 479,4",
+      "18,2",
+      "114"
+    ],
+    [
+      "49",
+      "491",
+      "Arrondissement d'Angers",
+      "Angers",
+      "401 392",
+      "1 740,7",
+      "230,6",
+      "66"
+    ],
+    [
+      "49",
+      "492",
+      "Arrondissement de Cholet",
+      "Cholet",
+      "228 576",
+      "2 102,5",
+      "108,7",
+      "32"
+    ],
+    [
+      "49",
+      "493",
+      "Arrondissement de Saumur",
+      "Saumur",
+      "132 572",
+      "1 968",
+      "67,4",
+      "52"
+    ],
+    [
+      "49",
+      "494",
+      "Arrondissement de Segré",
+      "Segré-en-Anjou Bleu",
+      "71 236",
+      "1 295,5",
+      "55",
+      "26"
+    ],
+    [
+      "50",
+      "501",
+      "Arrondissement d'Avranches",
+      "Avranches",
+      "135 050",
+      "1 888,2",
+      "71,5",
+      "134"
+    ],
+    [
+      "50",
+      "502",
+      "Arrondissement de Cherbourg",
+      "Cherbourg-en-Cotentin",
+      "187 817",
+      "1 643,9",
+      "114,3",
+      "144"
+    ],
+    [
+      "50",
+      "503",
+      "Arrondissement de Coutances",
+      "Coutances",
+      "70 570",
+      "1 142,1",
+      "61,8",
+      "80"
+    ],
+    [
+      "50",
+      "504",
+      "Arrondissement de Saint-Lô",
+      "Saint-Lô",
+      "104 085",
+      "1 277,3",
+      "81,5",
+      "87"
+    ],
+    [
+      "51",
+      "511",
+      "Arrondissement de Châlons-en-Champagne",
+      "Châlons-en-Champagne",
+      "106 611",
+      "2 612,4",
+      "40,8",
+      "150"
+    ],
+    [
+      "51",
+      "512",
+      "Arrondissement d'Épernay",
+      "Épernay",
+      "115 463",
+      "2 722,4",
+      "42,4",
+      "208"
+    ],
+    [
+      "51",
+      "513",
+      "Arrondissement de Reims",
+      "Reims",
+      "298 037",
+      "1 432,4",
+      "208,1",
+      "143"
+    ],
+    [
+      "51",
+      "514",
+      "Arrondissement de Vitry-le-François",
+      "Vitry-le-François",
+      "42 965",
+      "1 402",
+      "30,6",
+      "110"
+    ],
+    [
+      "52",
+      "521",
+      "Arrondissement de Chaumont",
+      "Chaumont",
+      "60 377",
+      "2 476,3",
+      "24,4",
+      "158"
+    ],
+    [
+      "52",
+      "522",
+      "Arrondissement de Langres",
+      "Langres",
+      "42 230",
+      "2 162,9",
+      "19,5",
+      "157"
+    ],
+    [
+      "52",
+      "523",
+      "Arrondissement de Saint-Dizier",
+      "Saint-Dizier",
+      "65 724",
+      "1 571,4",
+      "41,8",
+      "111"
+    ],
+    [
+      "53",
+      "531",
+      "Arrondissement de Château-Gontier",
+      "Château-Gontier-sur-Mayenne",
+      "73 131",
+      "1 527,4",
+      "47,9",
+      "76"
+    ],
+    [
+      "53",
+      "532",
+      "Arrondissement de Laval",
+      "Laval",
+      "115 195",
+      "686,1",
+      "167,9",
+      "34"
+    ],
+    [
+      "53",
+      "533",
+      "Arrondissement de Mayenne",
+      "Mayenne",
+      "117 142",
+      "2 961,8",
+      "39,6",
+      "130"
+    ],
+    [
+      "54",
+      "541",
+      "Arrondissement de Val-de-Briey",
+      "Val de Briey",
+      "165 510",
+      "1 018,4",
+      "162,5",
+      "115"
+    ],
+    [
+      "54",
+      "542",
+      "Arrondissement de Lunéville",
+      "Lunéville",
+      "74 751",
+      "1 438,11",
+      "52",
+      "162"
+    ],
+    [
+      "54",
+      "543",
+      "Arrondissement de Nancy",
+      "Nancy",
+      "426 443",
+      "1 583,92",
+      "269,2",
+      "196"
+    ],
+    [
+      "54",
+      "544",
+      "Arrondissement de Toul",
+      "Toul",
+      "65 532",
+      "1 205,48",
+      "54,4",
+      "118"
+    ],
+    [
+      "55",
+      "551",
+      "Arrondissement de Bar-le-Duc",
+      "Bar-le-Duc",
+      "56 524",
+      "1 450,6",
+      "39",
+      "110"
+    ],
+    [
+      "55",
+      "552",
+      "Arrondissement de Commercy",
+      "Commercy",
+      "41 772",
+      "1 932,2",
+      "21,6",
+      "135"
+    ],
+    [
+      "55",
+      "553",
+      "Arrondissement de Verdun",
+      "Verdun",
+      "81 994",
+      "2 828,6",
+      "29",
+      "254"
+    ],
+    [
+      "56",
+      "561",
+      "Arrondissement de Lorient",
+      "Lorient",
+      "324 555",
+      "1 461,8",
+      "222",
+      "58"
+    ],
+    [
+      "56",
+      "562",
+      "Arrondissement de Pontivy",
+      "Pontivy",
+      "158 506",
+      "2 944,6",
+      "53,8",
+      "92"
+    ],
+    [
+      "56",
+      "563",
+      "Arrondissement de Vannes",
+      "Vannes",
+      "300 329",
+      "2 416,2",
+      "124,3",
+      "99"
+    ],
+    [
+      "57",
+      "573",
+      "Arrondissement de Forbach-Boulay-Moselle",
+      "Forbach",
+      "234 103",
+      "1 283,3",
+      "182,4",
+      "169"
+    ],
+    [
+      "57",
+      "575",
+      "Arrondissement de Sarrebourg-Château-Salins",
+      "Sarrebourg",
+      "90 033",
+      "1 966,9",
+      "45,8",
+      "230"
+    ],
+    [
+      "57",
+      "576",
+      "Arrondissement de Sarreguemines",
+      "Sarreguemines",
+      "95 402",
+      "935,9",
+      "101,9",
+      "83"
+    ],
+    [
+      "57",
+      "577",
+      "Arrondissement de Thionville",
+      "Thionville",
+      "275 474",
+      "941,5",
+      "292,6",
+      "104"
+    ],
+    [
+      "57",
+      "579",
+      "Arrondissement de Metz",
+      "Metz",
+      "356 297",
+      "1 088,7",
+      "327,3",
+      "139"
+    ],
+    [
+      "58",
+      "581",
+      "Arrondissement de Château-Chinon (Ville)",
+      "Château-Chinon (Ville)",
+      "26 846",
+      "2 168,3",
+      "12,4",
+      "80"
+    ],
+    [
+      "58",
+      "582",
+      "Arrondissement de Clamecy",
+      "Clamecy",
+      "20 036",
+      "1 227,6",
+      "16,3",
+      "84"
+    ],
+    [
+      "58",
+      "583",
+      "Arrondissement de Nevers",
+      "Nevers",
+      "112 202",
+      "2 025,4",
+      "55,4",
+      "82"
+    ],
+    [
+      "58",
+      "584",
+      "Arrondissement de Cosne-Cours-sur-Loire",
+      "Cosne-Cours-sur-Loire",
+      "42 333",
+      "1 395,4",
+      "30,3",
+      "63"
+    ],
+    [
+      "59",
+      "591",
+      "Arrondissement d'Avesnes-sur-Helpe",
+      "Avesnes-sur-Helpe",
+      "223 006",
+      "1 407,5",
+      "158,4",
+      "151"
+    ],
+    [
+      "59",
+      "592",
+      "Arrondissement de Cambrai",
+      "Cambrai",
+      "157 460",
+      "901,6",
+      "174,6",
+      "116"
+    ],
+    [
+      "59",
+      "593",
+      "Arrondissement de Douai",
+      "Douai",
+      "245 129",
+      "476,6",
+      "514,3",
+      "64"
+    ],
+    [
+      "59",
+      "594",
+      "Arrondissement de Dunkerque",
+      "Dunkerque",
+      "370 983",
+      "1 442,7",
+      "257,1",
+      "111"
+    ],
+    [
+      "59",
+      "595",
+      "Arrondissement de Lille",
+      "Lille",
+      "1 268 900",
+      "879,5",
+      "1 442,8",
+      "124"
+    ],
+    [
+      "59",
+      "596",
+      "Arrondissement de Valenciennes",
+      "Valenciennes",
+      "350 157",
+      "634,8",
+      "551,6",
+      "82"
+    ],
+    [
+      "60",
+      "601",
+      "Arrondissement de Beauvais",
+      "Beauvais",
+      "229 677",
+      "2 099,9",
+      "109,4",
+      "246"
+    ],
+    [
+      "60",
+      "602",
+      "Arrondissement de Clermont",
+      "Clermont",
+      "130 261",
+      "1 141,7",
+      "114,1",
+      "146"
+    ],
+    [
+      "60",
+      "603",
+      "Arrondissement de Compiègne",
+      "Compiègne",
+      "182 430",
+      "1 274,5",
+      "143,1",
+      "156"
+    ],
+    [
+      "60",
+      "604",
+      "Arrondissement de Senlis",
+      "Senlis",
+      "287 531",
+      "1 344,2",
+      "213,9",
+      "132"
+    ],
+    [
+      "61",
+      "611",
+      "Arrondissement d'Alençon",
+      "Alençon",
+      "84 475",
+      "1 548,5",
+      "54,6",
+      "111"
+    ],
+    [
+      "61",
+      "612",
+      "Arrondissement d'Argentan",
+      "Argentan",
+      "107 097",
+      "1 904,1",
+      "56,2",
+      "123"
+    ],
+    [
+      "61",
+      "613",
+      "Arrondissement de Mortagne-au-Perche",
+      "Mortagne-au-Perche",
+      "83 629",
+      "2 650,8",
+      "31,5",
+      "151"
+    ],
+    [
+      "62",
+      "621",
+      "Arrondissement d'Arras",
+      "Arras",
+      "250 064",
+      "2 245,3",
+      "111,4",
+      "357"
+    ],
+    [
+      "62",
+      "622",
+      "Arrondissement de Béthune",
+      "Béthune",
+      "292 009",
+      "707,4",
+      "412,8",
+      "104"
+    ],
+    [
+      "62",
+      "623",
+      "Arrondissement de Boulogne-sur-Mer",
+      "Boulogne-sur-Mer",
+      "157 215",
+      "633,7",
+      "248,1",
+      "74"
+    ],
+    [
+      "62",
+      "624",
+      "Arrondissement de Montreuil",
+      "Montreuil-sur-Mer",
+      "110 250",
+      "1 327,1",
+      "83,1",
+      "164"
+    ],
+    [
+      "62",
+      "625",
+      "Arrondissement de Saint-Omer",
+      "Saint-Omer",
+      "128 316",
+      "813",
+      "157,8",
+      "89"
+    ],
+    [
+      "62",
+      "626",
+      "Arrondissement de Calais",
+      "Calais",
+      "152 245",
+      "593,4",
+      "256,6",
+      "52"
+    ],
+    [
+      "62",
+      "627",
+      "Arrondissement de Lens",
+      "Lens",
+      "367 806",
+      "351,5",
+      "1 046,4",
+      "50"
+    ],
+    [
+      "63",
+      "631",
+      "Arrondissement d'Ambert",
+      "Ambert",
+      "27 687",
+      "1 229,8",
+      "22,5",
+      "58"
+    ],
+    [
+      "63",
+      "632",
+      "Arrondissement de Clermont-Ferrand",
+      "Clermont-Ferrand",
+      "363 101",
+      "912,6",
+      "397,9",
+      "73"
+    ],
+    [
+      "63",
+      "633",
+      "Arrondissement d'Issoire",
+      "Issoire",
+      "78 814",
+      "2 268,5",
+      "34,7",
+      "134"
+    ],
+    [
+      "63",
+      "634",
+      "Arrondissement de Riom",
+      "Riom",
+      "138 294",
+      "2 705,3",
+      "51,1",
+      "155"
+    ],
+    [
+      "63",
+      "635",
+      "Arrondissement de Thiers",
+      "Thiers",
+      "56 557",
+      "853,5",
+      "66,3",
+      "44"
+    ],
+    [
+      "64",
+      "641",
+      "Arrondissement de Bayonne",
+      "Bayonne",
+      "317 339",
+      "2 267,7",
+      "139,9",
+      "122"
+    ],
+    [
+      "64",
+      "642",
+      "Arrondissement d'Oloron-Sainte-Marie",
+      "Oloron-Sainte-Marie",
+      "71 963",
+      "2 828,2",
+      "25,4",
+      "155"
+    ],
+    [
+      "64",
+      "643",
+      "Arrondissement de Pau",
+      "Pau",
+      "317 262",
+      "2 548,9",
+      "124,5",
+      "268"
+    ],
+    [
+      "65",
+      "651",
+      "Arrondissement d'Argelès-Gazost",
+      "Argelès-Gazost",
+      "37 348",
+      "1 300,2",
+      "28,7",
+      "87"
+    ],
+    [
+      "65",
+      "652",
+      "Arrondissement de Bagnères-de-Bigorre",
+      "Bagnères-de-Bigorre",
+      "48 451",
+      "1 783,5",
+      "27,2",
+      "170"
+    ],
+    [
+      "65",
+      "653",
+      "Arrondissement de Tarbes",
+      "Tarbes",
+      "145 550",
+      "1 380,4",
+      "105,4",
+      "212"
+    ],
+    [
+      "66",
+      "661",
+      "Arrondissement de Céret",
+      "Céret",
+      "137 271",
+      "1 214,1",
+      "113,1",
+      "64"
+    ],
+    [
+      "66",
+      "662",
+      "Arrondissement de Perpignan",
+      "Perpignan",
+      "300 117",
+      "720,5",
+      "416,5",
+      "39"
+    ],
+    [
+      "66",
+      "663",
+      "Arrondissement de Prades",
+      "Prades",
+      "59 467",
+      "2 181,4",
+      "27,3",
+      "123"
+    ],
+    [
+      "67",
+      "672",
+      "Arrondissement de Haguenau-Wissembourg",
+      "Haguenau",
+      "246 078",
+      "1 424,6",
+      "172,7",
+      "141"
+    ],
+    [
+      "67",
+      "673",
+      "Arrondissement de Molsheim",
+      "Molsheim",
+      "104 850",
+      "771,2",
+      "136",
+      "77"
+    ],
+    [
+      "67",
+      "674",
+      "Arrondissement de Saverne",
+      "Saverne",
+      "129 293",
+      "1 241",
+      "104,2",
+      "162"
+    ],
+    [
+      "67",
+      "675",
+      "Arrondissement de Sélestat-Erstein",
+      "Sélestat",
+      "160 993",
+      "980,5",
+      "164,2",
+      "101"
+    ],
+    [
+      "67",
+      "678",
+      "Arrondissement de Strasbourg",
+      "Strasbourg",
+      "522 596",
+      "337,6",
+      "1 548",
+      "33"
+    ],
+    [
+      "68",
+      "681",
+      "Arrondissement d'Altkirch",
+      "Altkirch",
+      "70 225",
+      "663,1",
+      "105,9",
+      "108"
+    ],
+    [
+      "68",
+      "682",
+      "Arrondissement de Colmar-Ribeauvillé",
+      "Colmar",
+      "210 841",
+      "1 247,9",
+      "169",
+      "98"
+    ],
+    [
+      "68",
+      "684",
+      "Arrondissement de Mulhouse",
+      "Mulhouse",
+      "359 581",
+      "707,1",
+      "508,5",
+      "79"
+    ],
+    [
+      "68",
+      "686",
+      "Arrondissement de Thann-Guebwiller",
+      "Thann",
+      "130 091",
+      "907,1",
+      "143,4",
+      "81"
+    ],
+    [
+      "69",
+      "691",
+      "Arrondissement de Lyon",
+      "Lyon",
+      "1 653 401",
+      "1 534,6",
+      "1 077,4",
+      "134"
+    ],
+    [
+      "69",
+      "692",
+      "Arrondissement de Villefranche-sur-Saône",
+      "Villefranche-sur-Saône",
+      "261 266",
+      "1 714,6",
+      "152,4",
+      "132"
+    ],
+    [
+      "70",
+      "701",
+      "Arrondissement de Lure",
+      "Lure",
+      "105 992",
+      "1 906,2",
+      "55,6",
+      "192"
+    ],
+    [
+      "70",
+      "702",
+      "Arrondissement de Vesoul",
+      "Vesoul",
+      "127 193",
+      "3 453,9",
+      "36,8",
+      "347"
+    ],
+    [
+      "71",
+      "711",
+      "Arrondissement d'Autun",
+      "Autun",
+      "125 452",
+      "1 994,3",
+      "62,9",
+      "89"
+    ],
+    [
+      "71",
+      "712",
+      "Arrondissement de Chalon-sur-Saône",
+      "Chalon-sur-Saône",
+      "155 940",
+      "1 484,5",
+      "105",
+      "142"
+    ],
+    [
+      "71",
+      "713",
+      "Arrondissement de Charolles",
+      "Charolles",
+      "84 593",
+      "2 443,8",
+      "34,6",
+      "126"
+    ],
+    [
+      "71",
+      "714",
+      "Arrondissement de Louhans",
+      "Louhans",
+      "67 890",
+      "1 430,2",
+      "47,5",
+      "88"
+    ],
+    [
+      "71",
+      "715",
+      "Arrondissement de Mâcon",
+      "Mâcon",
+      "116 435",
+      "1 221,9",
+      "95,3",
+      "119"
+    ],
+    [
+      "72",
+      "721",
+      "Arrondissement de la Flèche",
+      "La Flèche",
+      "148 379",
+      "2 521,4",
+      "58,8",
+      "118"
+    ],
+    [
+      "72",
+      "722",
+      "Arrondissement de Mamers",
+      "Mamers",
+      "148 968",
+      "2 904,9",
+      "51,3",
+      "191"
+    ],
+    [
+      "72",
+      "723",
+      "Arrondissement du Mans",
+      "Le Mans",
+      "269 386",
+      "779,7",
+      "345,5",
+      "45"
+    ],
+    [
+      "73",
+      "731",
+      "Arrondissement d'Albertville",
+      "Albertville",
+      "112 684",
+      "2 466,1",
+      "45,7",
+      "69"
+    ],
+    [
+      "73",
+      "732",
+      "Arrondissement de Chambéry",
+      "Chambéry",
+      "292 832",
+      "1 586,1",
+      "184,6",
+      "151"
+    ],
+    [
+      "73",
+      "733",
+      "Arrondissement de Saint-Jean-de-Maurienne",
+      "Saint-Jean-de-Maurienne",
+      "42 710",
+      "1 976",
+      "21,6",
+      "53"
+    ],
+    [
+      "74",
+      "741",
+      "Arrondissement d'Annecy",
+      "Annecy",
+      "298 238",
+      "1 261,6",
+      "237,8",
+      "77"
+    ],
+    [
+      "74",
+      "742",
+      "Arrondissement de Bonneville",
+      "Bonneville",
+      "197 580",
+      "1 558,2",
+      "129,3",
+      "59"
+    ],
+    [
+      "74",
+      "743",
+      "Arrondissement de Saint-Julien-en-Genevois",
+      "Saint-Julien-en-Genevois",
+      "204 177",
+      "660,3",
+      "311,1",
+      "73"
+    ],
+    [
+      "74",
+      "744",
+      "Arrondissement de Thonon-les-Bains",
+      "Thonon-les-Bains",
+      "161 163",
+      "907,7",
+      "169,7",
+      "70"
+    ],
+    [
+      "75",
+      "751",
+      "Arrondissement de Paris",
+      "Paris",
+      "2 103 778",
+      "105,4",
+      "19 959,9",
+      "1"
+    ],
+    [
+      "76",
+      "761",
+      "Arrondissement de Dieppe",
+      "Dieppe",
+      "231 061",
+      "3 120,1",
+      "74,1",
+      "343"
+    ],
+    [
+      "76",
+      "762",
+      "Arrondissement du Havre",
+      "Le Havre",
+      "384 491",
+      "1 221,2",
+      "314,8",
+      "149"
+    ],
+    [
+      "76",
+      "763",
+      "Arrondissement de Rouen",
+      "Rouen",
+      "645 412",
+      "1 936,2",
+      "333,3",
+      "216"
+    ],
+    [
+      "77",
+      "771",
+      "Arrondissement de Meaux",
+      "Meaux",
+      "350 034",
+      "1 343,3",
+      "260,6",
+      "139"
+    ],
+    [
+      "77",
+      "772",
+      "Arrondissement de Melun",
+      "Melun",
+      "299 720",
+      "617,1",
+      "485,7",
+      "59"
+    ],
+    [
+      "77",
+      "773",
+      "Arrondissement de Provins",
+      "Provins",
+      "187 432",
+      "2 344,6",
+      "79,9",
+      "174"
+    ],
+    [
+      "77",
+      "774",
+      "Arrondissement de Fontainebleau",
+      "Fontainebleau",
+      "156 615",
+      "1 228,5",
+      "127,5",
+      "85"
+    ],
+    [
+      "77",
+      "775",
+      "Arrondissement de Torcy",
+      "Torcy",
+      "474 307",
+      "381,8",
+      "1 242,3",
+      "50"
+    ],
+    [
+      "78",
+      "781",
+      "Arrondissement de Mantes-la-Jolie",
+      "Mantes-la-Jolie",
+      "284 957",
+      "759",
+      "375,4",
+      "109"
+    ],
+    [
+      "78",
+      "782",
+      "Arrondissement de Rambouillet",
+      "Rambouillet",
+      "235 520",
+      "987,3",
+      "238,5",
+      "83"
+    ],
+    [
+      "78",
+      "783",
+      "Arrondissement de Saint-Germain-en-Laye",
+      "Saint-Germain-en-Laye",
+      "541 233",
+      "350,9",
+      "1 542,4",
+      "44"
+    ],
+    [
+      "78",
+      "784",
+      "Arrondissement de Versailles",
+      "Versailles",
+      "423 376",
+      "187,2",
+      "2 261,6",
+      "23"
+    ],
+    [
+      "79",
+      "791",
+      "Arrondissement de Bressuire",
+      "Bressuire",
+      "109 407",
+      "1 938,9",
+      "56,4",
+      "57"
+    ],
+    [
+      "79",
+      "792",
+      "Arrondissement de Niort",
+      "Niort",
+      "200 463",
+      "2 445,1",
+      "82",
+      "121"
+    ],
+    [
+      "79",
+      "793",
+      "Arrondissement de Parthenay",
+      "Parthenay",
+      "65 359",
+      "1 615,4",
+      "40,5",
+      "78"
+    ],
+    [
+      "80",
+      "801",
+      "Arrondissement d'Abbeville",
+      "Abbeville",
+      "121 053",
+      "1 560,6",
+      "77,6",
+      "164"
+    ],
+    [
+      "80",
+      "802",
+      "Arrondissement d'Amiens",
+      "Amiens",
+      "306 069",
+      "2 343,1",
+      "130,6",
+      "291"
+    ],
+    [
+      "80",
+      "803",
+      "Arrondissement de Montdidier",
+      "Montdidier",
+      "46 658",
+      "781,9",
+      "59,7",
+      "109"
+    ],
+    [
+      "80",
+      "804",
+      "Arrondissement de Péronne",
+      "Péronne",
+      "91 633",
+      "1 484,6",
+      "61,7",
+      "208"
+    ],
+    [
+      "81",
+      "811",
+      "Arrondissement d'Albi",
+      "Albi",
+      "198 659",
+      "2 731,7",
+      "72,7",
+      "163"
+    ],
+    [
+      "81",
+      "812",
+      "Arrondissement de Castres",
+      "Castres",
+      "198 693",
+      "3 026,2",
+      "65,7",
+      "151"
+    ],
+    [
+      "82",
+      "821",
+      "Arrondissement de Castelsarrasin",
+      "Castelsarrasin",
+      "78 948",
+      "1 601,5",
+      "49,3",
+      "103"
+    ],
+    [
+      "82",
+      "822",
+      "Arrondissement de Montauban",
+      "Montauban",
+      "186 869",
+      "2 116,8",
+      "88,3",
+      "92"
+    ],
+    [
+      "83",
+      "831",
+      "Arrondissement de Draguignan",
+      "Draguignan",
+      "328 191",
+      "2 220,8",
+      "147,8",
+      "54"
+    ],
+    [
+      "83",
+      "832",
+      "Arrondissement de Toulon",
+      "Toulon",
+      "597 274",
+      "1 233,5",
+      "484,2",
+      "32"
+    ],
+    [
+      "83",
+      "833",
+      "Arrondissement de Brignoles",
+      "Brignoles",
+      "193 842",
+      "2 518,3",
+      "77",
+      "67"
+    ],
+    [
+      "84",
+      "841",
+      "Arrondissement d'Apt",
+      "Apt",
+      "127 585",
+      "1 390,6",
+      "91,7",
+      "57"
+    ],
+    [
+      "84",
+      "842",
+      "Arrondissement d'Avignon",
+      "Avignon",
+      "214 966",
+      "369,7",
+      "581,5",
+      "16"
+    ],
+    [
+      "84",
+      "843",
+      "Arrondissement de Carpentras",
+      "Carpentras",
+      "229 505",
+      "1 807",
+      "127",
+      "78"
+    ],
+    [
+      "85",
+      "851",
+      "Arrondissement de Fontenay-le-Comte",
+      "Fontenay-le-Comte",
+      "141 137",
+      "2 315,8",
+      "60,9",
+      "105"
+    ],
+    [
+      "85",
+      "852",
+      "Arrondissement de la Roche-sur-Yon",
+      "La Roche-sur-Yon",
+      "308 745",
+      "2 489,1",
+      "124",
+      "79"
+    ],
+    [
+      "85",
+      "853",
+      "Arrondissement des Sables-d'Olonne",
+      "Les Sables-d'Olonne",
+      "263 727",
+      "1 914,7",
+      "137,7",
+      "71"
+    ],
+    [
+      "86",
+      "861",
+      "Arrondissement de Châtellerault",
+      "Châtellerault",
+      "107 054",
+      "1 982,9",
+      "54",
+      "92"
+    ],
+    [
+      "86",
+      "862",
+      "Arrondissement de Montmorillon",
+      "Montmorillon",
+      "65 211",
+      "2 876,1",
+      "22,7",
+      "90"
+    ],
+    [
+      "86",
+      "863",
+      "Arrondissement de Poitiers",
+      "Poitiers",
+      "266 632",
+      "2 131,5",
+      "125,1",
+      "83"
+    ],
+    [
+      "87",
+      "871",
+      "Arrondissement de Bellac",
+      "Bellac",
+      "37 801",
+      "1 779,9",
+      "21,2",
+      "57"
+    ],
+    [
+      "87",
+      "872",
+      "Arrondissement de Limoges",
+      "Limoges",
+      "297 483",
+      "2 944,8",
+      "101",
+      "108"
+    ],
+    [
+      "87",
+      "873",
+      "Arrondissement de Rochechouart",
+      "Rochechouart",
+      "37 883",
+      "795,4",
+      "47,6",
+      "30"
+    ],
+    [
+      "88",
+      "881",
+      "Arrondissement d'Épinal",
+      "Épinal",
+      "186 880",
+      "2 598,2",
+      "84,6",
+      "140"
+    ],
+    [
+      "88",
+      "882",
+      "Arrondissement de Neufchâteau",
+      "Neufchâteau",
+      "69 448",
+      "1 817,4",
+      "30,3",
+      "251"
+    ],
+    [
+      "88",
+      "883",
+      "Arrondissement de Saint-Dié-des-Vosges",
+      "Saint-Dié-des-Vosges",
+      "100 920",
+      "1 458,2",
+      "73,5",
+      "116"
+    ],
+    [
+      "89",
+      "891",
+      "Arrondissement d'Auxerre",
+      "Auxerre",
+      "160 968",
+      "3 431,8",
+      "46,9",
+      "170"
+    ],
+    [
+      "89",
+      "892",
+      "Arrondissement d'Avallon",
+      "Avallon",
+      "40 498",
+      "2 078,8",
+      "19,5",
+      "135"
+    ],
+    [
+      "89",
+      "893",
+      "Arrondissement de Sens",
+      "Sens",
+      "130 801",
+      "1 916,8",
+      "68,2",
+      "118"
+    ],
+    [
+      "90",
+      "901",
+      "Arrondissement de Belfort",
+      "Belfort",
+      "140 255",
+      "609,4",
+      "230,2",
+      "101"
+    ],
+    [
+      "91",
+      "911",
+      "Arrondissement d'Étampes",
+      "Étampes",
+      "134 750",
+      "851,4",
+      "158,3",
+      "75"
+    ],
+    [
+      "91",
+      "912",
+      "Arrondissement d'Évry",
+      "Évry-Courcouronnes",
+      "550 545",
+      "469",
+      "1 173,9",
+      "51"
+    ],
+    [
+      "91",
+      "913",
+      "Arrondissement de Palaiseau",
+      "Palaiseau",
+      "653 190",
+      "484",
+      "1 349,6",
+      "68"
+    ],
+    [
+      "92",
+      "921",
+      "Arrondissement d'Antony",
+      "Antony",
+      "411 643",
+      "47,4",
+      "8 684,5",
+      "11"
+    ],
+    [
+      "92",
+      "922",
+      "Arrondissement de Nanterre",
+      "Nanterre",
+      "925 687",
+      "91,8",
+      "10 083,7",
+      "17"
+    ],
+    [
+      "92",
+      "923",
+      "Arrondissement de Boulogne-Billancourt",
+      "Boulogne-Billancourt",
+      "317 382",
+      "36,5",
+      "8 695,4",
+      "8"
+    ],
+    [
+      "93",
+      "931",
+      "Arrondissement de Bobigny",
+      "Bobigny",
+      "447 969",
+      "39,2",
+      "11 427,8",
+      "9"
+    ],
+    [
+      "93",
+      "932",
+      "Arrondissement du Raincy",
+      "Le Raincy",
+      "802 676",
+      "149,6",
+      "5 365,5",
+      "22"
+    ],
+    [
+      "93",
+      "933",
+      "Arrondissement de Saint-Denis",
+      "Saint-Denis",
+      "453 671",
+      "47,4",
+      "9 571,1",
+      "9"
+    ],
+    [
+      "94",
+      "941",
+      "Arrondissement de Créteil",
+      "Créteil",
+      "325 348",
+      "99,8",
+      "3 260",
+      "16"
+    ],
+    [
+      "94",
+      "942",
+      "Arrondissement de Nogent-sur-Marne",
+      "Nogent-sur-Marne",
+      "517 705",
+      "56,3",
+      "9 195,5",
+      "13"
+    ],
+    [
+      "94",
+      "943",
+      "Arrondissement de l'Haÿ-les-Roses",
+      "L'Haÿ-les-Roses",
+      "583 876",
+      "88,9",
+      "6 567,8",
+      "18"
+    ],
+    [
+      "95",
+      "951",
+      "Arrondissement d'Argenteuil",
+      "Argenteuil",
+      "433 454",
+      "108,6",
+      "3 991,3",
+      "17"
+    ],
+    [
+      "95",
+      "952",
+      "Arrondissement de Sarcelles",
+      "Sarcelles",
+      "490 335",
+      "371,3",
+      "1 320,6",
+      "62"
+    ],
+    [
+      "95",
+      "953",
+      "Arrondissement de Pontoise",
+      "Pontoise",
+      "357 864",
+      "766",
+      "467,2",
+      "104"
+    ],
+    [
+      "971",
+      "9711",
+      "Arrondissement de Basse-Terre",
+      "Basse-Terre",
+      "183 264",
+      "854,3",
+      "214,5",
+      "18"
+    ],
+    [
+      "971",
+      "9712",
+      "Arrondissement de Pointe-à-Pitre",
+      "Pointe-à-Pitre",
+      "200 896",
+      "774,1",
+      "259,5",
+      "14"
+    ],
+    [
+      "972",
+      "9721",
+      "Arrondissement de Fort-de-France",
+      "Fort-de-France",
+      "150 642",
+      "171",
+      "880,9",
+      "4"
+    ],
+    [
+      "972",
+      "9722",
+      "Arrondissement de la Trinité",
+      "La Trinité",
+      "72 895",
+      "337,6",
+      "215,9",
+      "10"
+    ],
+    [
+      "972",
+      "9723",
+      "Arrondissement du Marin",
+      "Le Marin",
+      "114 903",
+      "409,1",
+      "280,9",
+      "12"
+    ],
+    [
+      "972",
+      "9724",
+      "Arrondissement de Saint-Pierre",
+      "Saint-Pierre",
+      "22 190",
+      "210,3",
+      "105,5",
+      "8"
+    ],
+    [
+      "973",
+      "9731",
+      "Arrondissement de Cayenne",
+      "Cayenne",
+      "183 285",
+      "17 028,9",
+      "10,8",
+      "10"
+    ],
+    [
+      "973",
+      "9732",
+      "Arrondissement de Saint-Laurent-du-Maroni",
+      "Saint-Laurent-du-Maroni",
+      "101 799",
+      "40 945",
+      "2,5",
+      "8"
+    ],
+    [
+      "973",
+      "9733",
+      "Arrondissement de Saint-Georges",
+      "Saint-Georges",
+      "8 912",
+      "25 560",
+      "0,3",
+      "4"
+    ],
+    [
+      "974",
+      "9741",
+      "Arrondissement de Saint-Denis",
+      "Saint-Denis",
+      "218 278",
+      "287,8",
+      "758,4",
+      "3"
+    ],
+    [
+      "974",
+      "9742",
+      "Arrondissement de Saint-Pierre",
+      "Saint-Pierre",
+      "318 130",
+      "942,8",
+      "337,4",
+      "10"
+    ],
+    [
+      "974",
+      "9743",
+      "Arrondissement de Saint-Benoît",
+      "Saint-Benoît",
+      "131 262",
+      "735,8",
+      "178,4",
+      "6"
+    ],
+    [
+      "974",
+      "9744",
+      "Arrondissement de Saint-Paul",
+      "Saint-Paul",
+      "222 009",
+      "537,2",
+      "413,3",
+      "5"
+    ],
+    [
+      "976",
+      "-",
+      "Pas d'arrondissement,[Note 1]",
+      "Mamoudzou",
+      "256 518",
+      "376",
+      "+682,",
+      "17"
+    ]
+  ]
+]

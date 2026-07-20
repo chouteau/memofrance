@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Thème Sombre par défaut */
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-card: rgba(30, 41, 59, 0.7);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-color: #6366f1;
+    --accent-glow: rgba(99, 102, 241, 0.15);
+    --correct-color: #10b981;
+    --correct-glow: rgba(16, 185, 129, 0.15);
+    --wrong-color: #ef4444;
+    --wrong-glow: rgba(239, 68, 68, 0.15);
+    
+    --map-fill: #1e293b;
+    --map-stroke: #475569;
+    --map-hover: #4f46e5;
+    --map-highlight: #f59e0b;
+    --map-highlight-glow: rgba(245, 158, 11, 0.3);
+    
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+    
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] {
+    /* Thème Clair */
+    --bg-primary: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --bg-card: rgba(255, 255, 255, 0.75);
+    --border-color: rgba(0, 0, 0, 0.06);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-color: #4f46e5;
+    --accent-glow: rgba(79, 70, 229, 0.1);
+    --correct-color: #059669;
+    --correct-glow: rgba(5, 150, 105, 0.1);
+    --wrong-color: #dc2626;
+    --wrong-glow: rgba(220, 38, 38, 0.1);
+    
+    --map-fill: #e2e8f0;
+    --map-stroke: #cbd5e1;
+    --map-hover: #6366f1;
+    --map-highlight: #d97706;
+    
+    --shadow-glow: 0 0 15px rgba(79, 70, 229, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color var(--transition-normal), color var(--transition-normal);
+    overflow-x: hidden;
+}
+
+/* Background grid effect */
+.bg-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(var(--border-color) 1.5px, transparent 1.5px),
+        radial-gradient(var(--border-color) 1.5px, transparent 1.5px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Header brand classes reused in dashboard */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-icon {
+    font-size: 2rem;
+    background: linear-gradient(135deg, #818cf8, #4f46e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 8px rgba(99, 102, 241, 0.3));
+}
+
+/* Theme Toggle Button */
+.btn-icon {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.btn-icon:hover {
+    background: var(--accent-glow);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+}
+
+.btn-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Container Principal */
+.main-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 1.5rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Dashboard Panel */
+.dashboard {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+    gap: 1.5rem;
+}
+
+.dash-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.dash-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.dash-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.progress-container {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.progress-bar-wrapper {
+    background: var(--bg-secondary);
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.35rem;
+    border: 1px solid var(--border-color);
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #818cf8, var(--accent-color));
+    width: 0%;
+    transition: width var(--transition-normal);
+}
+
+/* Grille Principale */
+.game-grid {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Cartes (Panels) */
+.glass-panel {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    transition: border var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+/* Map Card and SVG styles */
+.map-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.france-map {
+    width: 100%;
+    height: auto;
+    max-height: 750px;
+    display: block;
+}
+
+/* styles of elements in SVG */
+.france-map path, .france-map polygon {
+    fill: var(--map-fill);
+    stroke: var(--map-stroke);
+    stroke-width: 0.35px;
+    transition: fill var(--transition-fast), stroke-width var(--transition-fast), filter var(--transition-fast);
+    cursor: pointer;
+}
+
+/* Interactive SVG hover state */
+.france-map .hoverable:hover,
+.france-map .hoverable:hover path,
+.france-map .hoverable:hover polygon {
+    fill: var(--map-hover) !important;
+    stroke: var(--text-primary) !important;
+    stroke-width: 0.6px;
+}
+.france-map .hoverable:hover {
+    filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.4));
+}
+
+/* Highlight / Active State for questions */
+.france-map .highlighted,
+.france-map .highlighted path,
+.france-map .highlighted polygon {
+    fill: var(--map-highlight) !important;
+    stroke: var(--text-primary) !important;
+    stroke-width: 0.8px !important;
+}
+.france-map .highlighted {
+    filter: drop-shadow(0 0 12px var(--map-highlight-glow)) !important;
+}
+
+.france-map .correct-highlight,
+.france-map .correct-highlight path,
+.france-map .correct-highlight polygon {
+    fill: var(--correct-color) !important;
+    stroke: var(--text-primary) !important;
+    stroke-width: 0.8px !important;
+}
+.france-map .correct-highlight {
+    filter: drop-shadow(0 0 12px var(--correct-glow)) !important;
+}
+
+.france-map .wrong-highlight,
+.france-map .wrong-highlight path,
+.france-map .wrong-highlight polygon {
+    fill: var(--wrong-color) !important;
+    stroke: var(--text-primary) !important;
+    stroke-width: 0.8px !important;
+}
+.france-map .wrong-highlight {
+    filter: drop-shadow(0 0 12px var(--wrong-glow)) !important;
+}
+
+/* Quiz Card / Panel */
+.quiz-card {
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.question-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.question-type-badge {
+    background: var(--accent-glow);
+    color: var(--accent-color);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: fit-content;
+    border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.question-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text-primary);
+}
+
+/* Options QCM */
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+}
+
+.option-btn {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.85rem 1.25rem;
+    border-radius: var(--radius-sm);
+    font-size: 1.05rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all var(--transition-fast);
+    text-align: left;
+    outline: none;
+}
+
+.option-btn:hover {
+    transform: translateY(-2px);
+    background: var(--accent-glow);
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+}
+
+.option-btn:active {
+    transform: translateY(0);
+}
+
+.option-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1.5px solid var(--text-secondary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.option-btn:hover .option-badge {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+/* Correct/Wrong option statuses */
+.option-btn.correct {
+    background: var(--correct-glow) !important;
+    border-color: var(--correct-color) !important;
+    color: var(--correct-color) !important;
+}
+
+.option-btn.correct .option-badge {
+    border-color: var(--correct-color) !important;
+    background: var(--correct-color) !important;
+    color: white !important;
+}
+
+.option-btn.wrong {
+    background: var(--wrong-glow) !important;
+    border-color: var(--wrong-color) !important;
+    color: var(--wrong-color) !important;
+}
+
+.option-btn.wrong .option-badge {
+    border-color: var(--wrong-color) !important;
+    background: var(--wrong-color) !important;
+    color: white !important;
+}
+
+.option-btn.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+/* Feedback panel */
+.feedback-panel {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feedback-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feedback-title.correct {
+    color: var(--correct-color);
+}
+
+.feedback-title.wrong {
+    color: var(--wrong-color);
+}
+
+.feedback-text {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Buttons primary & secondary */
+.btn-primary {
+    background: linear-gradient(135deg, #818cf8, var(--accent-color));
+    color: white;
+    border: none;
+    padding: 1.1rem 2rem;
+    border-radius: var(--radius-sm);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+    transition: all var(--transition-fast);
+    width: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+    filter: brightness(1.05);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Modales / overlays */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-normal);
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transform: scale(0.9);
+    transition: transform var(--transition-normal);
+    text-align: center;
+}
+
+.overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--text-primary), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Game settings card inside start modal */
+.settings-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.settings-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.settings-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.setting-card {
+    background: var(--bg-secondary);
+    border: 2px solid transparent;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.setting-card:hover {
+    border-color: var(--accent-color);
+    background: var(--accent-glow);
+}
+
+.setting-card.active {
+    border-color: var(--accent-color);
+    background: var(--accent-glow);
+    box-shadow: var(--shadow-sm);
+}
+
+.setting-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.setting-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Tooltip floating box */
+.map-tooltip {
+    position: absolute;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    z-index: 50;
+    box-shadow: var(--shadow-md);
+    transform: translate(-50%, -100%);
+    margin-top: -10px;
+    backdrop-filter: blur(4px);
+}
+
+/* Score recap final */
+.score-badge-large {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    text-shadow: 0 4px 12px var(--accent-glow);
+    margin: 1rem 0;
+}
+
+.recap-container {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--bg-secondary);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.recap-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.recap-row:last-child {
+    border-bottom: none;
+}
+
+.recap-indicator {
+    font-weight: 700;
+}
+
+.recap-indicator.correct {
+    color: var(--correct-color);
+}
+
+.recap-indicator.wrong {
+    color: var(--wrong-color);
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* DOM-TOM layouts */
+/* If the SVG contains groups separated for outremers, we can style the boxes differently */
+.subtype-com, .subtype-cdom, .subtype-ctuom {
+    cursor: pointer;
+}

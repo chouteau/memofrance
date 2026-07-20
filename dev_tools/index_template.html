@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mémomap France - Jeu de mémoire géographique</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗺️</text></svg>">
+</head>
+<body>
+    <!-- Background visual grid -->
+    <div class="bg-grid"></div>
+
+    <!-- Floating Map Tooltip -->
+    <div id="map-tooltip" class="map-tooltip"></div>
+
+    <!-- Main Container -->
+    <main class="main-container" style="margin-top: 1rem;">
+        <!-- Combined Header & Live Dashboard -->
+        <section class="dashboard">
+            <div class="dash-item brand" style="display: flex; flex-direction: row; align-items: center; gap: 0.5rem;">
+                <span class="logo-icon" style="font-size: 1.3rem;">🗺️</span>
+                <span class="dash-value" style="font-size: 1.1rem; font-weight: 700; background: linear-gradient(135deg, var(--text-primary), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Mémomap France</span>
+            </div>
+
+            <div class="dash-item">
+                <span class="dash-label">Question</span>
+                <span class="dash-value"><span id="curr-question">0</span> / 20</span>
+            </div>
+            
+            <div class="progress-container">
+                <span class="dash-label">Progression</span>
+                <div class="progress-bar-wrapper">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="dash-item" style="text-align: right;">
+                <span class="dash-label">Score</span>
+                <span id="score-value" class="dash-value" style="color: var(--accent-color);">0 / 0</span>
+            </div>
+
+            <div class="dash-item">
+                <button id="theme-toggle" class="btn-icon" title="Changer le thème" style="width: 36px; height: 36px; border-radius: var(--radius-sm);">
+                    <!-- Theme icon loaded dynamically via app.js -->
+                </button>
+            </div>
+        </section>
+
+        <!-- Main Game Grid -->
+        <section class="game-grid">
+            <!-- Left Column: The Interactive Map -->
+            <div class="glass-panel map-card">
+                {{MAP_SVG}}
+            </div>
+
+            <!-- Right Column: The Quiz Panel -->
+            <div class="glass-panel quiz-card">
+                <div class="question-header">
+                    <span id="question-badge" class="question-type-badge">Quiz</span>
+                    <h2 id="question-text" class="question-text">Préparation de la question...</h2>
+                </div>
+
+                <!-- QCM Options Grid -->
+                <div id="options-grid" class="options-grid">
+                    <!-- Loaded dynamically via app.js -->
+                </div>
+
+                <!-- Informative feedback block shown after answering -->
+                <div id="feedback-panel" class="feedback-panel">
+                    <div id="feedback-title" class="feedback-title">Correct</div>
+                    <p id="feedback-text" class="feedback-text">Info sur le département...</p>
+                </div>
+
+                <!-- Action Button -->
+                <button id="btn-next" class="btn-primary" style="display: none;">
+                    <span>Question Suivante</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modale Start: Choose settings & Start game -->
+    <div id="modal-start" class="overlay active">
+        <div class="modal-content">
+            <h2 class="modal-title">Mémomap France</h2>
+            <p style="color: var(--text-secondary);">Testez votre mémoire géographie sur les départements français, les régions et les préfectures.</p>
+            
+            <div class="settings-group" style="margin-bottom: 1rem;">
+                <span class="settings-label">Mécanique de jeu :</span>
+                <div class="settings-options" data-setting-type="mechanic" style="margin-bottom: 0.5rem;">
+                    <div class="setting-card active" data-setting="mechanic" data-value="qcm">
+                        <h3>QCM</h3>
+                        <p>Trouver la réponse parmi 4 propositions</p>
+                    </div>
+                    <div class="setting-card" data-setting="mechanic" data-value="click">
+                        <h3>Clic sur Carte</h3>
+                        <p>Cliquer sur la carte au bon endroit</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-group">
+                <span class="settings-label">Sélectionnez les catégories :</span>
+                <div class="settings-options" data-setting-type="mode">
+                    <div class="setting-card active" data-setting="mode" data-value="mixed">
+                        <h3>Mixte</h3>
+                        <p>Questions sur tout : cartes, villes, codes</p>
+                    </div>
+                    <div class="setting-card" data-setting="mode" data-value="depts">
+                        <h3>Départements</h3>
+                        <p>Identifier le département sur la carte et son code</p>
+                    </div>
+                    <div class="setting-card" data-setting="mode" data-value="regions">
+                        <h3>Régions</h3>
+                        <p>Identifier les 18 régions de France</p>
+                    </div>
+                    <div class="setting-card" data-setting="mode" data-value="cities">
+                        <h3>Préfectures</h3>
+                        <p>Trouver les préfectures et sous-préfectures</p>
+                    </div>
+                </div>
+            </div>
+
+            <button id="btn-start-game" class="btn-primary" style="margin-top: 1rem;">
+                <span>Commencer le Quiz</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modale End: Final scores and review -->
+    <div id="modal-end" class="overlay">
+        <div class="modal-content" style="max-width: 650px;">
+            <h2 class="modal-title">Partie Terminée !</h2>
+            <p style="color: var(--text-secondary);">Votre score final :</p>
+            
+            <div id="final-score" class="score-badge-large">0 / 20</div>
+            <div id="rating-message" style="margin-bottom: 0.5rem;">Rating...</div>
+            
+            <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: left; margin-bottom: 0.5rem;">
+                Revue des questions (cliquez sur une ligne pour afficher l'emplacement sur la carte) :
+            </p>
+            
+            <!-- List of failed/correct questions -->
+            <div id="recap-list" class="recap-container">
+                <!-- Loaded dynamically via app.js -->
+            </div>
+
+            <button id="btn-restart" class="btn-primary">
+                <span>Rejouer</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 110 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Load data & logic scripts -->
+    <script src="departments.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
