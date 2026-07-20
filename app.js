@@ -447,13 +447,15 @@ const QuizGame = {
 
     clearMapHighlights() {
         const map = document.querySelector(".france-map");
-        map.querySelectorAll(".highlighted, .correct-highlight, .wrong-highlight").forEach(el => {
-            el.classList.remove("highlighted", "correct-highlight", "wrong-highlight");
+        map.querySelectorAll(".highlighted, .correct-highlight, .wrong-highlight, .region-context").forEach(el => {
+            el.classList.remove("highlighted", "correct-highlight", "wrong-highlight", "region-context");
         });
     },
 
-    highlightMap(code, isRegion, className = "highlighted") {
-        this.clearMapHighlights();
+    highlightMap(code, isRegion, className = "highlighted", clearFirst = true) {
+        if (clearFirst) {
+            this.clearMapHighlights();
+        }
         
         if (isRegion) {
             // Find all paths that belong to this region in the SVG
@@ -569,8 +571,13 @@ const QuizGame = {
 
             grid.appendChild(container);
             
-            // Highlight map (with target department)
-            this.highlightMap(q.highlightCode, q.isRegionHighlight, "highlighted");
+            // Highlight map: first clear, then draw the region context, and finally draw the department on top
+            this.clearMapHighlights();
+            const regionCode = REGION_SVG_MAPPING[q.dept.region];
+            if (regionCode) {
+                this.highlightMap(regionCode, true, "region-context", false);
+            }
+            this.highlightMap(q.highlightCode, false, "highlighted", false);
 
         } else if (this.settings.mechanic === "click") {
             // Click mode: Clear map highlights (the user must find the target)

@@ -269,6 +269,15 @@ body {
     filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.4));
 }
 
+/* Region Context Highlight (Warmup) */
+.france-map .region-context,
+.france-map .region-context path,
+.france-map .region-context polygon {
+    fill: rgba(99, 102, 241, 0.08) !important;
+    stroke: var(--accent-color) !important;
+    stroke-width: 0.8px !important;
+}
+
 /* Highlight / Active State for questions */
 .france-map .highlighted,
 .france-map .highlighted path,
