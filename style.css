@@ -280,6 +280,8 @@ body {
 
 /* Highlight / Active State for questions */
 .france-map .highlighted,
+.france-map path.highlighted,
+.france-map polygon.highlighted,
 .france-map .highlighted path,
 .france-map .highlighted polygon {
     fill: var(--map-highlight) !important;
@@ -291,6 +293,8 @@ body {
 }
 
 .france-map .correct-highlight,
+.france-map path.correct-highlight,
+.france-map polygon.correct-highlight,
 .france-map .correct-highlight path,
 .france-map .correct-highlight polygon {
     fill: var(--correct-color) !important;
@@ -302,6 +306,8 @@ body {
 }
 
 .france-map .wrong-highlight,
+.france-map path.wrong-highlight,
+.france-map polygon.wrong-highlight,
 .france-map .wrong-highlight path,
 .france-map .wrong-highlight polygon {
     fill: var(--wrong-color) !important;

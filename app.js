@@ -109,6 +109,16 @@ const QuizGame = {
         this.bindEvents();
         this.initTheme();
         this.setupInteractiveMap();
+
+        window.addEventListener("resize", () => {
+            const existing = document.getElementById("prefecture-marker");
+            if (existing && this.state.active && this.state.questions) {
+                const q = this.state.questions[this.state.currentIndex];
+                if (q && q.dept) {
+                    this.updatePrefectureMarker(q.highlightCode, q.dept.prefecture);
+                }
+            }
+        });
     },
 
     initTheme() {
@@ -429,6 +439,8 @@ const QuizGame = {
         map.querySelectorAll(".highlighted, .correct-highlight, .wrong-highlight, .region-context").forEach(el => {
             el.classList.remove("highlighted", "correct-highlight", "wrong-highlight", "region-context");
         });
+        const existing = document.getElementById("prefecture-marker");
+        if (existing) existing.remove();
     },
 
     highlightMap(code, isRegion, className = "highlighted", clearFirst = true) {
@@ -457,6 +469,68 @@ const QuizGame = {
                 }
             });
         }
+    },
+
+    updatePrefectureMarker(code, prefectureName) {
+        const existing = document.getElementById("prefecture-marker");
+        if (existing) existing.remove();
+
+        if (!code || !prefectureName) return;
+
+        const elementIds = getSvgElementsForDept(code);
+        if (elementIds.length === 0) return;
+
+        // Try to find the largest path element for better centering
+        let bestEl = null;
+        let maxArea = -1;
+        elementIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (el) {
+                const rect = el.getBoundingClientRect();
+                const area = rect.width * rect.height;
+                if (area > maxArea) {
+                    maxArea = area;
+                    bestEl = el;
+                }
+            }
+        });
+
+        if (!bestEl) return;
+
+        const map = document.querySelector(".map-card");
+        if (!map) return;
+
+        const mapRect = map.getBoundingClientRect();
+        const rect = bestEl.getBoundingClientRect();
+
+        // Calculate center relative to map-card
+        const x = rect.left - mapRect.left + rect.width / 2;
+        const y = rect.top - mapRect.top + rect.height / 2;
+
+        // Create marker element
+        const marker = document.createElement("div");
+        marker.id = "prefecture-marker";
+        marker.style.cssText = `
+            position: absolute;
+            left: ${x}px;
+            top: ${y}px;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            pointer-events: none;
+            z-index: 10;
+            animation: slideUp 0.3s ease;
+        `;
+
+        marker.innerHTML = `
+            <div style="width: 10px; height: 10px; background: #fff; border: 2.5px solid var(--accent-color); border-radius: 50%; box-shadow: 0 0 10px rgba(99, 102, 241, 0.8), 0 0 0 4px rgba(255, 255, 255, 0.2); margin-bottom: 2px;"></div>
+            <div style="background: var(--bg-card); color: var(--text-primary); font-size: 0.75rem; padding: 2px 6px; border-radius: var(--radius-sm); border: 1px solid var(--accent-color); font-weight: 700; white-space: nowrap; box-shadow: var(--shadow-md); letter-spacing: -0.01em;">
+                ${prefectureName}
+            </div>
+        `;
+
+        map.appendChild(marker);
     },
 
     showQuestion() {
@@ -546,6 +620,7 @@ const QuizGame = {
                 this.highlightMap(regionCode, true, "region-context", false);
             }
             this.highlightMap(q.highlightCode, false, "highlighted", false);
+            this.updatePrefectureMarker(q.highlightCode, q.dept.prefecture);
 
         } else if (this.settings.mechanic === "click") {
             // Click mode: Clear map highlights (the user must find the target)
@@ -657,6 +732,7 @@ const QuizGame = {
             let info = "";
             if (q.dept) {
                 info = `Le département <strong>${q.dept.name} (${q.dept.code})</strong> est situé dans la région <strong>${q.dept.region}</strong>. Sa préfecture est <strong>${q.dept.prefecture}</strong>.`;
+                this.updatePrefectureMarker(q.highlightCode, q.dept.prefecture);
             }
             feedbackText.innerHTML = info;
 
@@ -734,6 +810,7 @@ const QuizGame = {
             
             if (q.dept) {
                 details += `La bonne réponse était <strong>${q.dept.name} (${q.dept.code})</strong> (préfecture : ${q.dept.prefecture}, région : ${q.dept.region}).`;
+                this.updatePrefectureMarker(q.highlightCode, q.dept.prefecture);
             } else if (q.isRegionHighlight) {
                 details += `La bonne réponse était la région <strong>${q.correctAnswer}</strong>.`;
             }
@@ -838,6 +915,9 @@ const QuizGame = {
                 // Allow clicking row to show that department highlighted on map (post-game review)
                 row.addEventListener("click", () => {
                     this.highlightMap(h.question.highlightCode, h.question.isRegionHighlight, h.isCorrect ? "correct-highlight" : "wrong-highlight");
+                    if (h.question.dept) {
+                        this.updatePrefectureMarker(h.question.highlightCode, h.question.dept.prefecture);
+                    }
                 });
                 recapList.appendChild(row);
             });
