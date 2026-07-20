@@ -594,17 +594,11 @@ const QuizGame = {
                 targetVal = q.correctAnswer;
             } else if (q.type === "PREFECTURE") {
                 const isSub = q.questionText.includes("sous-préfecture");
-                targetLabel = isSub ? "une sous-préfecture du département" : "la préfecture du département";
-                targetVal = `${q.dept.name} (${q.dept.code})`;
+                targetLabel = isSub ? "la sous-préfecture" : "la préfecture";
+                targetVal = q.correctAnswer;
             } else if (q.type === "CODE_DEPT") {
-                const isCodeToName = q.questionText.includes("porte le numéro");
-                if (isCodeToName) {
-                    targetLabel = "le département ayant le numéro";
-                    targetVal = q.dept.code;
-                } else {
-                    targetLabel = "le numéro (code) du département";
-                    targetVal = q.dept.name;
-                }
+                targetLabel = "le département ayant le numéro (code)";
+                targetVal = q.dept.code;
             } else if (q.type === "CITY_TO_DEPT") {
                 const matches = q.questionText.match(/ville de ([^?]+)\?/);
                 const city = matches ? matches[1].trim() : "";
