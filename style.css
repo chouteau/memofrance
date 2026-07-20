@@ -269,8 +269,19 @@ body {
     filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.4));
 }
 
+/* Region Context Highlight (Warmup) */
+.france-map .region-context,
+.france-map .region-context path,
+.france-map .region-context polygon {
+    fill: rgba(99, 102, 241, 0.08) !important;
+    stroke: var(--accent-color) !important;
+    stroke-width: 0.8px !important;
+}
+
 /* Highlight / Active State for questions */
 .france-map .highlighted,
+.france-map path.highlighted,
+.france-map polygon.highlighted,
 .france-map .highlighted path,
 .france-map .highlighted polygon {
     fill: var(--map-highlight) !important;
@@ -282,6 +293,8 @@ body {
 }
 
 .france-map .correct-highlight,
+.france-map path.correct-highlight,
+.france-map polygon.correct-highlight,
 .france-map .correct-highlight path,
 .france-map .correct-highlight polygon {
     fill: var(--correct-color) !important;
@@ -293,6 +306,8 @@ body {
 }
 
 .france-map .wrong-highlight,
+.france-map path.wrong-highlight,
+.france-map polygon.wrong-highlight,
 .france-map .wrong-highlight path,
 .france-map .wrong-highlight polygon {
     fill: var(--wrong-color) !important;
@@ -688,4 +703,18 @@ body {
 /* If the SVG contains groups separated for outremers, we can style the boxes differently */
 .subtype-com, .subtype-cdom, .subtype-ctuom {
     cursor: pointer;
+}
+
+/* Tinder Card Animations */
+.tinder-card {
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.4s ease, border-color var(--transition-fast), box-shadow var(--transition-fast) !important;
+}
+.tinder-card.swipe-right {
+    transform: translate(250px, -30px) rotate(20deg) !important;
+    opacity: 0 !important;
+}
+.tinder-card:hover {
+    transform: translateY(-4px) scale(1.01);
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.18) !important;
 }

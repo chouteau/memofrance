@@ -1,5 +1,9 @@
 # 🗺️ MemoFrance
 
+<p align="center">
+  <img src="logo_hexagon.png" alt="MemoFrance Logo" width="120" style="border-radius: 12px;"/>
+</p>
+
 **MemoFrance** est un jeu de quiz géographique interactif moderne et esthétique, conçu pour tester et améliorer votre mémoire sur la géographie française (métropole et Outre-mer). 
 
 👉 **[Jouer au jeu en ligne !](https://chouteau.github.io/memofrance/)**
