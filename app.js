@@ -183,7 +183,8 @@ const QuizGame = {
         const tooltip = document.getElementById("map-tooltip");
 
         // We target only elements representing departments (metropolitan, DOM, special statuts)
-        const paths = map.querySelectorAll(".subtype-dm, .subtype-cdom, .subtype-ctuom, .subtype-cmst");
+        const paths = Array.from(map.querySelectorAll(".subtype-dm, .subtype-cdom, .subtype-ctuom, .subtype-cmst"))
+            .filter(el => el.id !== "FR-20R");
         
         paths.forEach(el => {
             el.classList.add("hoverable");
